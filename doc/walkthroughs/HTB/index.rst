@@ -1,5 +1,5 @@
-Home Page
-*************
+Hack The Box Page
+********************
 
 .. Documentation documentation master file, created by
    sphinx-quickstart on Thu Oct 28 19:05:31 2021.
@@ -10,17 +10,11 @@ Home Page
    :maxdepth: 1
    :caption: Contents:
    
-   virtualbox/index
-   docker/index
-   hacking/index
-   defense/index
-   IT/index
-   interview_questions/index
-   walkthroughs/index
-   
+   SUID_exploit/index
+   info_disclosure/index
+   pivot/index
 
 Indices and tables
 ==================
 
 * :ref:`search`
-

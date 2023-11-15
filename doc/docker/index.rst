@@ -1,4 +1,4 @@
-Home Page
+Docker Page
 *************
 
 .. Documentation documentation master file, created by
@@ -10,17 +10,9 @@ Home Page
    :maxdepth: 1
    :caption: Contents:
    
-   virtualbox/index
-   docker/index
-   hacking/index
-   defense/index
-   IT/index
-   interview_questions/index
-   walkthroughs/index
-   
+   blank
 
 Indices and tables
 ==================
 
 * :ref:`search`
-
