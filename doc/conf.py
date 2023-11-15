@@ -6,9 +6,9 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'Example'
-copyright = 'workshop participant'
-author = 'workshop participant'
+project = 'docs'
+copyright = '2023, mynameisORIG'
+author = 'mynameisORIG'
 release = '0.1'
 
 
@@ -25,4 +25,6 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = 'sphinx_rtd_theme'
+# html_theme = 'classic'
+#html_theme = 'bizstyle'
 html_static_path = ['_static']
