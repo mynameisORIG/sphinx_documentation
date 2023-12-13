@@ -18,7 +18,7 @@ Hacking Home Page
    PWdecrypt/index
    exploits/index
    github/index
-   c2/index
+   C2/index
 
 Indices and tables
 ==================

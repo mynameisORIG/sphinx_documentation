@@ -1,4 +1,4 @@
-Hacking Home Page
+C2 Home Page
 *******************
 
 .. toctree::

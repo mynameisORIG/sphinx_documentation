@@ -1,4 +1,4 @@
-Hacking Home Page
+Sliver Home Page
 *******************
 
 .. toctree::
