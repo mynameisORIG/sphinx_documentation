@@ -6,3 +6,4 @@ Linux Server Homepage
    :caption: Contents:
 
    puppet/index
+   squid/index
