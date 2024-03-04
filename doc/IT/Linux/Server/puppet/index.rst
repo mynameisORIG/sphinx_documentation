@@ -6,6 +6,7 @@ Puppet Page
    :caption: Contents:
 
    puppet_troubleshooting
+   install
    
 Indices and tables
 ==================
