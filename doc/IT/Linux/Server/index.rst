@@ -7,3 +7,4 @@ Linux Server Homepage
 
    puppet/index
    squid/index
+   RHSatellite/index
