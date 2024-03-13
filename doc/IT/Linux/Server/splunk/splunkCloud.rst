@@ -16,3 +16,4 @@ Search queries
         index="linux"
         index="win"
         index IN ("netfw","netids")
+        index="_internal" sourctype=splunkd host=* component=DC* host="hostname"
