@@ -8,4 +8,4 @@ Linux Server Homepage
    puppet/index
    squid/index
    RHSatellite/index
-   Splunk/index
+   splunk/index
