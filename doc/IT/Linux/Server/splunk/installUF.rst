@@ -82,14 +82,14 @@ As root user
 .. code-block:: console
 
         mv X_all_deploymentclient_folder /opt/splunkforwarder/etc/apps/
-        /opt/splunkforwarder/bin/splunk enable boot-start
+        /opt/splunkforwarder/bin/splunk enable boot-start -user splunkfwd -systemd-managed 1
         systemctl start SplunkForwarder
 
 
 Changing UF port
 ###################
 
-Splunk User
+Splunk Users
 +++++++++++++++++
 
 If you want to change the management port on the Splunk UF

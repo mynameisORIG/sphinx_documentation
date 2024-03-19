@@ -17,3 +17,5 @@ Search queries
         index="win"
         index IN ("netfw","netids")
         index="_internal" sourctype=splunkd host=* component=DC* host="hostname"
+        index=apache status=!200 | timechart spu=1h count by status 
+
