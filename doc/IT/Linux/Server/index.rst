@@ -9,3 +9,4 @@ Linux Server Homepage
    squid/index
    RHSatellite/index
    splunk/index
+   nagios/index
