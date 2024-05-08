@@ -1,5 +1,7 @@
-[Backup](https://answerhub.nagios.com/support/s/article/Backing-Up-and-Restoring-Migrating-Nagios-XI-2024-b36feda0)
-****************************************************************************************************************************
+.. _backup_link: https://answerhub.nagios.com/support/s/article/Backing-Up-and-Restoring-Migrating-Nagios-XI-2024-b36feda0
+
+[Backup]
+************
 
 Backup Overview
 ####################
@@ -27,7 +29,7 @@ CLI
 #########
 
 .. code-block:: console
-    
+
     /usr/local/nagiosxi/scripts/backup_xi.sh
 
 

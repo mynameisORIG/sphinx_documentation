@@ -1,5 +1,7 @@
-[Migrate 2024 Nagios to New Server](https://answerhub.nagios.com/support/s/article/Migrating-Nagios-XI-2024-to-a-different-Server-d715ec94#:~:text=To%20restore%20a%20backup%20of%20your%20Nagios%20XI,to%20copy%20the.tar.gz%20file%20to%20the%20%2Fstore%2Fbackups%2Fnagiosxi%2F%20directory.)
-****************************************************************************************************************************************************************************************************************************************************************************************************************
+.. _backup_link: (https://answerhub.nagios.com/support/s/article/Migrating-Nagios-XI-2024-to-a-different-Server-d715ec94#:~:text=To%20restore%20a%20backup%20of%20your%20Nagios%20XI,to%20copy%20the.tar.gz%20file%20to%20the%20%2Fstore%2Fbackups%2Fnagiosxi%2F%20directory.)
+
+Migrate 2024 Nagios to New Server
+*********************************************
 
 Backup CLI
 #############
