@@ -19,6 +19,7 @@ Hacking Home Page
    exploits/index
    github/index
    C2/index
+   notableKaliLocations/index
 
 Indices and tables
 ==================
