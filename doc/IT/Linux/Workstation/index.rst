@@ -8,3 +8,4 @@ Linux Workstation Homepage
    changeForgotRoot_PW
    PermissionIssues
    puppet
+   NetworkManager

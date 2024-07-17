@@ -8,5 +8,5 @@ Linux Server Homepage
    puppet/index
    squid/index
    RHSatellite/index
-   splunk/index
    nagios/index
+   SIEM/index
