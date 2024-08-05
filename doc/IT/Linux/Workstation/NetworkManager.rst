@@ -29,3 +29,6 @@ Turn NetworkManager on and off
 ##################################
 
 .. code-block:: console
+
+    nmcli con up "eth0"
+    nmcli con donw "eth0"
