@@ -7,6 +7,8 @@ Nagios Page
 
    migrate2024NewServer
    backup
+   addSSLCerts
+   troubleshooting
    
 Indices and tables
 ==================
