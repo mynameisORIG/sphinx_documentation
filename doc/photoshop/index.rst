@@ -1,5 +1,5 @@
-Home Page
-*************
+Photoshop home Page
+***************************8
 
 .. Documentation documentation master file, created by
    sphinx-quickstart on Thu Oct 28 19:05:31 2021.
@@ -10,14 +10,8 @@ Home Page
    :maxdepth: 1
    :caption: Contents:
    
-   virtualbox/index
-   docker/index
-   hacking/index
-   defense/index
-   IT/index
-   interview_questions/index
-   walkthroughs/index
-   photoshop/index
+   gimp/index
+
    
 
 Indices and tables
