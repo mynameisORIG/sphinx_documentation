@@ -5,7 +5,7 @@ Wazuh Page
    :maxdepth: 1
    :caption: Contents:
 
-   Dashboard
+   dashboard
    EndpointSecurity
    
 Indices and tables
