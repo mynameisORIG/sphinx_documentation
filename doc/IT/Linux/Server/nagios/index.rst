@@ -9,6 +9,7 @@ Nagios Page
    backup
    addSSLCerts
    troubleshooting
+   logs
    
 Indices and tables
 ==================
