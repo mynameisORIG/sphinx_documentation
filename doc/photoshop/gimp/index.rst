@@ -1,5 +1,5 @@
 Photoshop home Page
-***************************8
+***************************
 
 .. Documentation documentation master file, created by
    sphinx-quickstart on Thu Oct 28 19:05:31 2021.

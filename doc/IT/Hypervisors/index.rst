@@ -1,5 +1,5 @@
-Home Page
-*************
+Hypervisor home Page
+***************************
 
 .. Documentation documentation master file, created by
    sphinx-quickstart on Thu Oct 28 19:05:31 2021.
@@ -11,13 +11,7 @@ Home Page
    :caption: Contents:
    
    virtualbox/index
-   coding/index
-   hacking/index
-   defense/index
-   IT/index
-   interview_questions/index
-   walkthroughs/index
-   photoshop/index
+
    
 
 Indices and tables
