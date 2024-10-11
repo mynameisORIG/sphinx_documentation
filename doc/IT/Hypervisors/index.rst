@@ -11,6 +11,7 @@ Hypervisor home Page
    :caption: Contents:
    
    virtualbox/index
+   hyperv/index
 
    
 

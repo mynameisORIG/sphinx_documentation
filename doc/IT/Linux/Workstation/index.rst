@@ -6,6 +6,7 @@ Linux Workstation Homepage
    :caption: Contents:
 
    changeForgotRoot_PW
+   rescueMode
    PermissionIssues
    puppet
    NetworkManager
