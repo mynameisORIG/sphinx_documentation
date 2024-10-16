@@ -10,3 +10,4 @@ Linux Workstation Homepage
    PermissionIssues
    puppet
    NetworkManager
+   nftables
