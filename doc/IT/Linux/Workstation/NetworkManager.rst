@@ -13,7 +13,7 @@ Show different connections
 
 .. code-block:: console
 
-    nmcil con show
+    nmcli con show
 
 Modify connection
 ###################
@@ -31,4 +31,4 @@ Turn NetworkManager on and off
 .. code-block:: console
 
     nmcli con up "eth0"
-    nmcli con donw "eth0"
+    nmcli con down "eth0"
