@@ -11,3 +11,4 @@ Linux Server Homepage
    RHSatellite/index
    nagios/index
    SIEM/index
+   codeREPO/index
