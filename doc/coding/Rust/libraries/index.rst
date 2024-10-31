@@ -1,4 +1,4 @@
-rust home Page
+rust libraries home Page
 ***************************
 
 .. Documentation documentation master file, created by
@@ -10,8 +10,7 @@ rust home Page
    :maxdepth: 1
    :caption: Contents:
    
-   compile
-   libraries/index
+   clapArgs
 
    
 
