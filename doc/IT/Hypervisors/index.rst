@@ -12,6 +12,7 @@ Hypervisor home Page
    
    virtualbox/index
    hyperv/index
+   proxmox/index
 
    
 
