@@ -37,6 +37,8 @@ Lists the information about the ingress controller in kubernetes
 
 .. code-block:: console
 
+    kubectl get ingress -n awx
+
 namespace
 #############
 
