@@ -5,6 +5,7 @@ Nagios Page
    :maxdepth: 1
    :caption: Contents:
 
+   addNCPAclient
    migrate2024NewServer
    backup
    addSSLCerts
