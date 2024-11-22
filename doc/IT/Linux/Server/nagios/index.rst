@@ -11,6 +11,7 @@ Nagios Page
    addSSLCerts
    troubleshooting
    logs
+   updateXI
    
 Indices and tables
 ==================
