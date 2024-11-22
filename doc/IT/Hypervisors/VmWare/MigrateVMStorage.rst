@@ -11,17 +11,13 @@ Prereq
 Steps
 ##########
 
-#.  Right-click the virtual machine and select Migrate.
+1.  Right-click the virtual machine and select Migrate.
  #. To locate a virtual machine, select a data center, folder, cluster, resource pool, host, or vApp.
  #. Click the **Virtual Machines** tab.
-#. Click **Change storage only** and click **Next**.
-#. Select the format for the virtual machine's disks.
-#. Select a virtual machine storage policy from the **VM Storage Policy** drop-down menu.
-
-Paragraph:
-
-Storage policies specify storage requirements for applications that run on the virtual machine.
-You can also select the default policy for vSAN or Virtual Volumes datastores.
-
-#. Select the datastore location where you want to store the virtual machine files. 
-#. On the Ready to complete page, review the details and click **Finish**.
+2. Click **Change storage only** and click **Next**.
+3. Select the format for the virtual machine's disks.
+4. Select a virtual machine storage policy from the **VM Storage Policy** drop-down menu.
+    Storage policies specify storage requirements for applications that run on the virtual machine.
+    You can also select the default policy for vSAN or Virtual Volumes datastores.
+5. Select the datastore location where you want to store the virtual machine files. 
+6. On the Ready to complete page, review the details and click **Finish**.
