@@ -57,3 +57,21 @@ To enter the shell of the pod, run the following:
 .. code-block:: console
 
     kubectl exec -it PODNAME -n NAMESPACE -- /bin/bash
+
+
+Secrets
+##################
+
+Delete
+++++++++++++++
+
+.. code-block:: console
+
+    kubectl delete secret awx-hogwarts-edu-secret -n awx
+
+create
++++++++++++++
+
+.. code-block:: console
+
+    kubectl create secret tls awx-nc-hogwarts-edu-secret --cert=/opt/cert/cert.crt --key=/opt/cert/key.key -n awx

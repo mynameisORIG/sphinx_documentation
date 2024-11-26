@@ -11,3 +11,4 @@ Linux Workstation Homepage
    puppet
    NetworkManager
    nftables
+   selinux

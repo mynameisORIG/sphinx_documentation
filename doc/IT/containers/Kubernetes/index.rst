@@ -6,4 +6,6 @@ Kubernetes Homepage
    :caption: Contents:
 
    basicCMDS
+   deploymentConfig
+   installServices/index
    
