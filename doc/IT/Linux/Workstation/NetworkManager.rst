@@ -39,6 +39,8 @@ Create a bond
 active-backup
 -------------------
 
+Active-backup ensures only one interface is active at a time for redundancy
+
 .. code-block:: console
 
     sudo nmcli connection add type bond con-name bond0 ifname bond0 mode active-backup
