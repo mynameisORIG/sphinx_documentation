@@ -6,4 +6,6 @@ Proxmox Homepage
    :caption: Contents:
 
    setupLDAPADAuthentication
+   setupwifi
+   StartupSetup
    
