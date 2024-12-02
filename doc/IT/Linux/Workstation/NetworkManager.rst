@@ -32,3 +32,18 @@ Turn NetworkManager on and off
 
     nmcli con up "eth0"
     nmcli con down "eth0"
+
+Create a bond
+####################
+
+active-backup
+-------------------
+
+.. code-block:: console
+
+    sudo nmcli connection add type bond con-name bond0 ifname bond0 mode active-backup
+    sudo nmcli connection add type ethernet con-name bond0-slave-wlp1s0 ifname wlp1s0 master bond0 primary wlp1s0
+    sudo nmcli connection add type ethernet con-name bond0-slave-eno2 ifname eno2 master bond0 primary wlp1s0
+
+    nmcli con up bond0
+    ip add sh bond0
