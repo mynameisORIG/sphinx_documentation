@@ -11,3 +11,5 @@
     tar xzf xi-latest.tar.gz
     cd nagiosxi
     ./upgrade
+
+You can choose what version here: https://assets.nagios.com/downloads/nagiosxi/versions.php
