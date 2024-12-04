@@ -35,7 +35,7 @@ awx-ingress.yml
             - awx.hogwarts.edu
         secretName: awx-hogwarts-edu-secret
     rules:
-        - host: tower-east0.northcarolina.edu
+        - host: tower-east0.hogwarts.edu
           http:
             paths:
               - path: /
