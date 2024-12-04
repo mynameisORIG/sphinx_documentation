@@ -5,7 +5,8 @@ Linux Server Homepage
    :maxdepth: 1
    :caption: Contents:
 
-   puppet/index
+   ConfigurationMGMT/index
+   awx/index
    docker/index
    squid/index
    RHSatellite/index
