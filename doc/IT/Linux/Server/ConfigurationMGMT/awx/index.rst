@@ -6,6 +6,7 @@ Awx Page
    :caption: Contents:
 
    install
+   files
    
 Indices and tables
 ==================
