@@ -60,11 +60,11 @@ awx.yml
         type: ClusterIP
         ports:
             - name: http
-            port: 80
-            targetPort: 80
+              port: 80
+              targetPort: 80
             - name: https
-            port: 443
-            targetPort: 443
+              port: 443
+              targetPort: 443
         selector:
             app: awx-demo
 
