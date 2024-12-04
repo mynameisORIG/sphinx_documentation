@@ -1,6 +1,8 @@
 Setting up wifi for Proxmox
 *********************************
 
+link: https://forum.proxmox.com/threads/howto-proxmox-ve-8-1-2-wifi-w-snat.142831/
+
 Pre
 #############
 

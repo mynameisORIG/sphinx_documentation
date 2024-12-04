@@ -6,7 +6,8 @@ Splunk Page
    :caption: Contents:
 
    splunkCloud
-   installUF 
+   installUF
+   changeMGMTport
    
 Indices and tables
 ==================
