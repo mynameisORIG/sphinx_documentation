@@ -7,4 +7,5 @@ Coding Homepage
 
    python3/index
    Rust/index
+   TypeScript/index
    git
