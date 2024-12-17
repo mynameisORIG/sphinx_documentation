@@ -7,6 +7,7 @@ Configuration Management Page
 
    awx/index
    puppet/index
+   ansible/index
    
 Indices and tables
 ==================

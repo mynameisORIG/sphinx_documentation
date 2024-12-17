@@ -1,16 +1,13 @@
-Puppet Page
+Ansible Page
 *******************
 
 .. toctree::
    :maxdepth: 1
    :caption: Contents:
 
-   puppet_troubleshooting
-   install
-   transfer_to_new_puppetserver
+   secrets
    
 Indices and tables
 ==================
 
 * :ref:`search`
-

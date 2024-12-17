@@ -1,11 +1,10 @@
-Containers Homepage
+LXC Homepage
 *********************
 
 .. toctree::
    :maxdepth: 1
    :caption: Contents:
 
-   Kubernetes/index
-   docker/index
-   lxc/index
+   basicCMDS
+   networking
    

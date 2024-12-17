@@ -18,3 +18,11 @@ This turns the typescript file into a module. This is declared at the end of the
 .. code-block:: console
 
     export {}
+
+Compile and run
+####################
+
+.. code-block:: console
+
+    tsc file.ts
+    node file.js

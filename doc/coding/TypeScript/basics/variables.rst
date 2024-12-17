@@ -33,6 +33,18 @@ This shows how to create a boolean variable. In this example we will use **isLog
 
     let isLoggedIn: boolean = false
 
+any
++++++++++++++++++++++
+
+**Do not use this! This is bad practice**
+
+This basically allows you to not to worry about the type of variable
+
+.. code-block:: console
+    
+    let obj: any = "string"
+
+
 extra
 ############
 
