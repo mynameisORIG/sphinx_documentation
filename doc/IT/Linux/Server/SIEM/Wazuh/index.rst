@@ -7,6 +7,7 @@ Wazuh Page
 
    dashboard
    EndpointSecurity
+   scripts
    
 Indices and tables
 ==================
