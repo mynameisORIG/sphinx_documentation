@@ -25,6 +25,14 @@ Modify connection
 
     nmcli con mod eth0 <from the above list>
 
+Turn off IPv6
+#######################
+
+.. code-block:: console
+
+    nmcli con mod eth0 ipv6.method "disabled"
+    nmcli con up eth0
+
 Turn NetworkManager on and off
 ##################################
 
