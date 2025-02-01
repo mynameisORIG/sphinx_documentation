@@ -1,6 +1,7 @@
 Fmt module
 ********************
 
+Source: https://pkg.go.dev/fmt
 
 fmt.Sprintf
 #####################
