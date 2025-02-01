@@ -12,3 +12,4 @@ Linux Workstation Homepage
    NetworkManager
    nftables
    selinux
+   certs
