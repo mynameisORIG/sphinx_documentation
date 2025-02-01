@@ -13,3 +13,4 @@ Linux Workstation Homepage
    nftables
    selinux
    certs
+   packages

@@ -13,3 +13,4 @@ Linux Server Homepage
    nagios/index
    SIEM/index
    codeREPO/index
+   morpheus/index
