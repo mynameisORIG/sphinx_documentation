@@ -1,22 +1,25 @@
 Network NetworkManager
 ***************************
 
+Commands
+############
+
 Show connection settings
-#############################
+==================================
 
 .. code-block:: console
     
     nmcli dev show
 
 Show different connections
-##############################
+===================================
 
 .. code-block:: console
 
     nmcli con show
 
 Modify connection
-###################
+======================================
 
 * ipv4.gateway <X.X.X.X>
 * ipv4.dns "X.X.X.1 X.X.X.2"
@@ -26,7 +29,7 @@ Modify connection
     nmcli con mod eth0 <from the above list>
 
 Turn off IPv6
-#######################
+====================================
 
 .. code-block:: console
 
@@ -34,7 +37,7 @@ Turn off IPv6
     nmcli con up eth0
 
 Turn NetworkManager on and off
-##################################
+========================================
 
 .. code-block:: console
 
@@ -42,10 +45,10 @@ Turn NetworkManager on and off
     nmcli con down "eth0"
 
 Create a bond
-####################
+================================
 
 active-backup
--------------------
+=========================
 
 Active-backup ensures only one interface is active at a time for redundancy
 
@@ -57,3 +60,34 @@ Active-backup ensures only one interface is active at a time for redundancy
 
     nmcli con up bond0
     ip add sh bond0
+
+Files
+###############
+
+The location for the network file should be around here:
+
+.. code-block:: console
+
+    cd /etc/NetworkManager/system-connections
+
+The file should look something like This
+
+.. code-block:: console
+
+    vi ens192.nmconnection
+
+ipv4 section
+========================
+
+The following shows how to input an ipv4 address, it's gateway, it's dns, and the method it uses to get this.
+
+There are different methods: **auto** and **manual**
+
+.. code-block:: console
+
+    [ipv4]
+    address1=192.168.1.1/25
+    gateway=192.168.1.254
+    dns=192.168.1.17
+    method=manual
+
