@@ -8,6 +8,7 @@ Red Hat Satellite Page
    content
    host
    Infrastructure
+   Administer
    
 Indices and tables
 ==================
