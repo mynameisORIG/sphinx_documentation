@@ -10,3 +10,4 @@ Coding Homepage
    TypeScript/index
    golang/index
    git
+   vim
