@@ -41,3 +41,26 @@ Indenting
 #. Use the arrow keys to select the lines
     #. Press the `>` to indent
     #. Press the '<' to unindent
+
+Replace multiple matching words at once
+################################################
+
+.. code-block:: console
+
+    :%s/oldword/newword/gc
+
+* the `%` means it is applied to the entire file
+* the `s/oldword/newword/g` means it subsitutes the oldword for the newword globally
+* the `c` at the end means it will prompt for confirmation before each change
+
+
+Add a certain string to the end of each line
+####################################################
+
+.. code-block:: console
+
+    :%s/$/.hogwarts.edu/
+
+* the `%s` subsitutes on **all lines**
+* the `$` matches the **end of each line**
+* `.hogwarts.edu` is the text to be added
