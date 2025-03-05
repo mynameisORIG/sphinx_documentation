@@ -6,3 +6,4 @@ VmWare Homepage
    :caption: Contents:
 
    MigrateVMStorage
+   exportasOVF
