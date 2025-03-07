@@ -14,3 +14,4 @@ Linux Server Homepage
    SIEM/index
    codeREPO/index
    morpheus/index
+   homepage/index
