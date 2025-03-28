@@ -11,6 +11,7 @@ python3 home Page
    :caption: Contents:
    
    libraries/index
+   decorator
 
    
 
