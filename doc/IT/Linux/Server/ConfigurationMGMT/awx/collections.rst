@@ -16,3 +16,12 @@ The structure should look like this
     │   └── hosts
     ├── roles/
     └── vars/
+
+The requirements.yml file should look like this
+
+.. code-block:: console
+
+    ---
+    collections:
+    - name: community.general
+        version: "10.5.0"
