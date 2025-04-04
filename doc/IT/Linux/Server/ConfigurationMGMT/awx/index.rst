@@ -7,6 +7,7 @@ Awx Page
 
    install
    files
+   collections
    
 Indices and tables
 ==================
