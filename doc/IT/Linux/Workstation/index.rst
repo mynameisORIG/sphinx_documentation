@@ -14,3 +14,4 @@ Linux Workstation Homepage
    selinux
    certs
    packages
+   Partitions
