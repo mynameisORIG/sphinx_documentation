@@ -38,6 +38,20 @@ xfs
 Updating Partition setup
 ###################################
 
+Grow the partition
++++++++++++++++++++++++++
+
+.. code-block:: console
+
+    growpart /dev/sdb 1
+
+Grow Filesystem
++++++++++++++++++++++
+
+.. code-block:: console
+
+    sudo xfs_growfs /dev/sdb1
+
 Resize partition
 +++++++++++++++++++++++++
 
@@ -71,7 +85,7 @@ Grow Filesystem
 
 .. code-block:: console
 
-    sudo xfs_growfs /opt/www
+    sudo xfs_growfs /dev/sdb1
 
 verify changes
 +++++++++++++++++++++++
