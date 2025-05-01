@@ -33,3 +33,10 @@ After making sure everything is in this listed above, restart *puppet* on the cl
 .. code-block:: console
 
    systemctl enable --now puppet; systemctl start puppet
+
+Execute single module
+#############################
+
+.. code-block:: console
+
+   puppet agent -t --tags <module>

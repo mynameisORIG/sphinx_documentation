@@ -15,3 +15,4 @@ Linux Server Homepage
    codeREPO/index
    morpheus/index
    homepage/index
+   SQL/index
