@@ -11,6 +11,14 @@ Stop any appilcations (e.g Wordpress) that write to the database to avoid data c
 
 Or, lock the database in read-only mode (optional for replication use).
 
+To Lock the database in read-only mode, you can do this:
+
+.. code-block:: console
+
+    FLUSH TABLES WITH READ LOCK;
+
+Stop mariadb
+
 .. code-block:: console
 
     systemctl stop mariadb
@@ -67,3 +75,11 @@ Test the New Server
 
     mysql -u root -p -e "SHOW DATABASES;"
     mysql -u root -p -e "SELECT User, Host FROM mysql.user;"
+
+Unlock databases if need be
+###############################
+
+.. code-block:: console
+
+    UNLOCK TABLES;
+
