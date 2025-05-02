@@ -15,3 +15,4 @@ Linux Workstation Homepage
    certs
    packages
    Partitions
+   systemdService
