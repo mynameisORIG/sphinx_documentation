@@ -16,3 +16,4 @@ Linux Server Homepage
    morpheus/index
    homepage/index
    SQL/index
+   nextcloud/index
