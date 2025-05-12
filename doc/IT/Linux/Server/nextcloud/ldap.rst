@@ -34,11 +34,19 @@ Only these object classes:
 
     inetOrgPerson
     posixAccount
-    
+
 OCC
 ###########
+
+Shows current ldap config
 
 .. code-block:: console
 
     sudo -u apache php ../occ ldap:show-config
+
+Checks if connection works
+
+.. code-block:: console
+
+    sudo -u apache php ../occ ldap:test-config s01
 
