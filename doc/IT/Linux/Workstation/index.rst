@@ -10,7 +10,7 @@ Linux Workstation Homepage
    PermissionIssues
    puppet
    NetworkManager
-   nftables
+   firewall/index
    selinux
    certs
    packages
