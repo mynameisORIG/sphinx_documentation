@@ -21,3 +21,22 @@ this updates the agents
 
     /var/ossec/bin/agent_upgrade -a 003 --package_type rpm
     /var/ossec/bin/agent_upgrade -a 003 --package_type deb
+
+
+manage agent
+#####################
+
+
+list agents
+---------------------
+
+.. code-block:: console
+
+    /var/ossec/bin/manage_agents -l
+
+remove agents
+---------------------
+
+.. code-block:: console
+
+    /var/ossec/bin/manage_agents -r <agentID>
