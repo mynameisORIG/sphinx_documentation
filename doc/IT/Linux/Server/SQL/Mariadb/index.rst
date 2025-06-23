@@ -6,3 +6,4 @@ Mariadb Homepage
    :caption: Contents:
 
    switchDBServer
+   commands
