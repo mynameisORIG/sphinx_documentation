@@ -15,3 +15,8 @@ This is for CENTOS or RHEL 9. It provides newer versions of software packages, p
     dnf module install php:remi-8.1
     dnf install php80
     module load php80
+
+Oracle Instant Client
+###########################
+
+`Oracle Instant Client Download page <https://www.oracle.com/database/technologies/instant-client/linux-x86-64-downloads.html>`_
