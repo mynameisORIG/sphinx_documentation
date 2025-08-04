@@ -64,3 +64,16 @@ Add a certain string to the end of each line
 * the `%s` subsitutes on **all lines**
 * the `$` matches the **end of each line**
 * `.hogwarts.edu` is the text to be added
+
+
+Removing a ./ from a string
+###################################
+
+.. code-block:: console
+
+    :%s#\./##g
+
+* `:%s` → Substitute in all lines
+* `\./` → Escapes the literal . and matches ./
+* `##` → Replace with nothing (delete it)
+* `g` → Global (all matches per line)
