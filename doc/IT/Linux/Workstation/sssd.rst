@@ -70,7 +70,7 @@ Troubleshooting
 Backend is offline
 +++++++++++++++++++++++
 
-Restart the sssd Service
+If you see `Backend is offline` when running `systemctl status sssd`, you should probably restart the sssd service.
 
 .. code-block:: console
 
