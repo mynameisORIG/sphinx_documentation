@@ -16,3 +16,4 @@ Linux Workstation Homepage
    packages
    Partitions
    systemdService
+   sssd
