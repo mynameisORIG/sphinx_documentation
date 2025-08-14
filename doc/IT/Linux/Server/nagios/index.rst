@@ -12,6 +12,7 @@ Nagios Page
    troubleshooting
    logs
    updateXI
+   notifcations
    
 Indices and tables
 ==================

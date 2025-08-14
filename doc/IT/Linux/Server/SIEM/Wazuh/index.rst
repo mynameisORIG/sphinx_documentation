@@ -9,6 +9,7 @@ Wazuh Page
    EndpointSecurity
    scripts
    rulesAlerts
+   tranferWazuhServer
    
 Indices and tables
 ==================
