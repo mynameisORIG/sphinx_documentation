@@ -1,6 +1,8 @@
 Transfering Wazuh Server
 **********************************
 
+# https://groups.google.com/g/wazuh/c/ndasy4fBMwE?pli=1
+
 This is documentation on how to transfer wazuh data from one server to another
 
 First make sure the wazuh-dashboard is stopped

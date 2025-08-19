@@ -20,3 +20,28 @@ Oracle Instant Client
 ###########################
 
 `Oracle Instant Client Download page <https://www.oracle.com/database/technologies/instant-client/linux-x86-64-downloads.html>`_
+
+EPEL
+############
+
+Enable code ready builder
+
+.. code-block:: console
+
+    dnf config-manager --set-enabled crb
+
+CENTOS or RHEL 10
+++++++++++++++++++++++
+
+
+.. code-block:: console
+
+    dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-10.noarch.rpm
+
+CENTOS or RHEL 9
+++++++++++++++++++++++
+
+
+.. code-block:: console
+
+    dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm https://dl.fedoraproject.org/pub/epel/epel-next-release-latest-9.noarch.rpm

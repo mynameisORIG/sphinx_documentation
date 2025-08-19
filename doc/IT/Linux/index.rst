@@ -1,4 +1,4 @@
-Linux Server IT Homepage
+Linux IT Homepage
 ***************************
 
 .. toctree::
