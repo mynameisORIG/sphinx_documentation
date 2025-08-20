@@ -6,6 +6,7 @@ Semaphore Page
    :caption: Contents:
 
    config
+   keys
    
 Indices and tables
 ==================
