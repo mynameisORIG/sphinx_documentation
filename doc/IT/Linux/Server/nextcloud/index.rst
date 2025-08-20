@@ -6,3 +6,4 @@ nextcloud Homepage
    :caption: Contents:
 
    ldap
+   talk
