@@ -13,6 +13,7 @@ URLS:
 
 * https://vpsie.com/knowledge-base/how-to-install-composer-on-rhel-or-centos/
 * https://reintech.io/blog/install-use-composer-centos-9#google_vignette
+* https://getcomposer.org/download/
 
 Option 1
 +++++++++++++++++++
