@@ -171,15 +171,15 @@ Both stats and eventstats are essential commands in Splunk used for performing s
     :widths: 25, 25, 50
     :header-rows: 1
 
-        * - Feature
-            - Stats
-            - Eventstats
-        * - Operation
-            - Generates statistical summaries based on grouped events.
-            - Adds computed statistical results back to individual events.
-        * - Scope
-            - Results in aggregated output; drops original event data
-            - Retains original events and appends calculated fields to them
-        * - Use Case
-            - Use for standalone reports and dashboards.
-            - Use for enhancing event details without altering the dataset.
+    * - Feature
+        - Stats
+        - Eventstats
+    * - Operation
+        - Generates statistical summaries based on grouped events.
+        - Adds computed statistical results back to individual events.
+    * - Scope
+        - Results in aggregated output; drops original event data
+        - Retains original events and appends calculated fields to them
+    * - Use Case
+        - Use for standalone reports and dashboards.
+        - Use for enhancing event details without altering the dataset.
