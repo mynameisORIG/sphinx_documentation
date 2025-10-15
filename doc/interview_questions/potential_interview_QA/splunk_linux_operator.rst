@@ -183,3 +183,95 @@ Both stats and eventstats are essential commands in Splunk used for performing s
    * - Use Case
      - Use for standalone reports and dashboards.
      - Use for enhancing event details without altering the dataset.
+
+28. What Is the Difference Between a Splunk App and a Splunk Add-on?
+###########################################################################
+
+Splunk Apps and Add-ons are both packageable units that extend Splunk’s functionality, but they are designed for different purposes. Understanding the distinction is vital for tailoring Splunk deployments based on user needs and data source requirements.
+
+.. list-table:: app v. add
+   :widths: 25 25 50
+   :header-rows: 1
+
+   * - Feature
+     - Splunk App
+     - Splunk Add-On
+   * - Definition
+     - A package with dashboards, reports, and configurations for end-users.
+     - A lightweight component extending Splunk functionality (e.g., data inputs).
+   * - Focus
+     - User-facing functionalities like visualizations and alerts.
+     - Backend integrations or data normalization.
+   * - Dependency
+     - Often relies on add-ons for extended data input and parsing.
+     - Standalone or used alongside apps for specific capabilities.
+   * - Example
+     - Splunk IT SErvice Intelligence
+     - Splunk Add-on for AWS
+
+29. Explain the Difference Between Search Head Clustering and Search Head Pooling in Splunk?
+#####################################################################################################
+
+Search Head Clustering and Search Head Pooling are methods for scaling search capabilities across multiple Splunk instances. However, only one of these is recommended for modern deployments.
+
+.. list-table:: clustering v. pooling
+   :widths: 25 25 50
+   :header-rows: 1
+
+   * - Aspect
+     - Search Head Clustering
+     - Search Head Pooling
+   * - Definition
+     - A feature for high availability using replicated search data..
+     - Deprecated method for sharing configurations among search heads.
+   * - Data Sharing
+     - Replicates knowledge objects and search results across nodes.
+     - Relies on shared storage, with limited redundancy.
+   * - Status
+     - Actively supported and recommended for production.
+     - No longer supported; considered obsolete.
+   * - Use Case
+     - Large-scale, enterprise-grade deployments needing resilience.
+     - Legacy environments requiring minimal search head redundancy.
+
+31. What is Splunk Btool, and How Is It used?
+##################################################
+
+Splunk Btool is a diagnostic command-line utility used for inspecting and debugging configuration files in Splunk. It plays a crucial role in complex Splunk environments where multiple configuration layers—such as system-level, app-level, and user-level—can create conflicts or inconsistencies. Btool helps administrators trace the origin of each configuration setting and understand the effective values applied by Splunk at runtime.
+
+34. How Can you ADdd Folder Access Logs from a Windows Machine to Splunk
+#############################################################################
+
+To monitor folder access logs on a Windows machine using Splunk, several configuration steps are required. First, Windows auditing must be enabled to generate security events related to folder access. Then, Splunk's Universal Forwarder is deployed on the source machine to collect and forward these logs to the Splunk indexer.
+
+Configuration involves setting up auditing policies via the Local Security Policy tool and using inputs.conf to specify the relevant log sources. Folder access events are typically logged under the Windows Security Event Log, making them accessible for further analysis and reporting once ingested into Splunk.
+
+37. In What Format Does Splunk Store It's Indexed Data?
+############################################################
+
+Splunk stores its indexed data using a proprietary format composed of raw data and indexed metadata. This structure is optimized for fast searching and efficient storage.
+
+* **Raw Data Files**: Contain the original, unaltered event logs ingested by Splunk
+* **Index Files (tsidx)**: Store metadata such as timestamps, field values, and keyword indexes, enabling accelerated search operations.
+
+Each index resides within a specific directory structure under Splunk’s file system, segmented into hot, warm, and cold buckets. The dual storage approach ensures that while the original event is preserved for audit or forensic needs, the metadata accelerates query performance and reporting.
+
+39. What is a FishBucket in Splunk, and What is Its Index Used For?
+######################################################################
+
+The fishbucket in Splunk is an internal checkpoint database that stores metadata about previously indexed files. Its primary  role is to track read positions and CRc signatures to prevent re-indexing of the same data.
+
+Located at `$SPLUNK_HOME/var/lib/splunk/fishbucket`, this directory contains special indexes used only by Splunk to manage file tracking. The fishbucket ensures efficient log ingestion and helps maintain data uniqueness by skipping files that have already been processed.
+
+40. How can you determine when splunk has finished indexing a log file?
+###############################################################################
+
+o confirm that Splunk has fully indexed a log file, administrators typically monitor internal logs or review indexing throughput metrics. The internal index (`_internal``) provides near real-time visibility into the status of data ingestion.
+
+Using this internal data, administrators can assess:
+
+* Completion of data parsing and indexing. 
+* Throughput statistics for each index. 
+* Latency between data input and availability for search.
+
+Additionally, the fishbucket can confirm the last-read position of a monitored file, indicating whether indexing has concluded or is still ongoing.
