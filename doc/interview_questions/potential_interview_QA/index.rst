@@ -1,5 +1,5 @@
-interview questions
-*********************
+potential interview questions
+***************************************
 
 .. Documentation documentation master file, created by
    sphinx-quickstart on Thu Oct 28 19:05:31 2021.
@@ -13,9 +13,8 @@ Welcome to Documentation's documentation!
    :maxdepth: 1
    :caption: Contents:
 
-   potential_interview_QA/index
-   interview_QA/advanced_linux_administrator
-   interview_QA/associate_pen_tester
+   associate_pen_tester
+   splunk_linux_operator
 
 Indices and tables
 ==================

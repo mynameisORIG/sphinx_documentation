@@ -57,3 +57,8 @@ Each server different data collection needs, ensuring flexible and efficent data
  * Limited to 500MB/day with reduced functionality.
 * Trial License
  * Temporary access to Enterprise features.
+
+9. What is a Summary Index in Splunk, and How is it Used?
+#################################################################
+
+
