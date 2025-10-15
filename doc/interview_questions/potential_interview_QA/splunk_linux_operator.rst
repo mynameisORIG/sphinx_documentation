@@ -97,3 +97,89 @@ Dashboards enhance visibility and enable quick, actionable insights across datas
 * **Verbose**: Provides complete event information, including raw data.
 
 Search mode selection directly afects performance and data granularity.
+
+14. What is sourcetype in Splunk, and Why is it Important?
+##############################################################
+
+A sourcetype in Splunk defines the format of incoming data. It ensures the data is correctly parsed, indexed, and searchable.
+
+**Example**: Assiging the **access_combined** sourcetype to Apache web logs allow consistent field extraction
+
+15. What are the various types of data inputs in Splunk?
+###########################################################
+
+* Files and directories
+* Syslog
+* APIs
+* Scripted Inputs
+
+16. What are the Key Configuration Files in Splunk?
+##########################################################
+
+* **inputs.conf**: Defines data inputs
+* **props.conf**: Manages data parsing
+* **transforms.conf**: Handles data transformation and field extraction.
+
+18. How can you clear search History in Splunk?
+###################################################
+
+.. code-block:: console
+
+    rm -rf $SPLUNK_HOME/var/log/splunk/searchhistory.log
+
+21. What Is a Splunk Universal Forwarder, and How Does It Differ from a Heavy Forwarder?
+################################################################################################
+
+* **Universal Forwarder (UF)**: Lightweight agent with minimal resource usage; used for forwarding raw data without parsing.
+* **Heavy Forwarder (HF)**: Full Splunk instance with parsing, indexing, and filtering capabilities; suitable for preprocessing large datasets. 
+
+Key Differences:
+
+* **Data Parsing**: UF doesn’t parse; HF does. 
+* **Resource Usage**: UF is resource-light; HF is resource-intensive. 
+* **Use Cases**: UF for large-scale data collection; HF for intelligent data routing and transformation. 
+
+23. Can You Explain the Role of the Deployment Server in Splunk?
+####################################################################
+
+The Deployment Server is a centralized configuration management tool in Splunk.
+
+* It pushes configurations and updates to forwarders. 
+* It ensures consistency across all nodes by managing apps, inputs, and outputs. 
+* It scales efficiently, supporting thousands of clients. 
+
+Used primarily in large-scale environments to reduce manual configuration effort.
+
+24. What Is the Role of Metadata in Splunk, and How Is It Used in Indexing?
+################################################################################
+
+Metadata helps categorize and retrieve data in Splunk:
+
+* **Host**: Source machine. 
+* **Source**: File or stream providing the data. 
+* **Sourcetype**: Format used for field extraction. 
+* **Index Mapping**: Organizes data into index buckets for efficient querying. 
+
+Splunk uses metadata during indexing to enhance search speed and relevance.
+
+27. How Do the Stats and Eventstats Commands Differ in Splunk?
+####################################################################
+
+Both stats and eventstats are essential commands in Splunk used for performing statistical computations on event data. However, they serve distinct purposes in the data pipeline, especially in how they treat the original dataset. The key differences are outlined below:
+
+.. list-table:: Commands
+    :widths: 25, 25, 50
+    :header-rows: 1
+
+        * - Feature
+            - Stats
+            - Eventstats
+        * - Operation
+            - Generates statistical summaries based on grouped events.
+            - Adds computed statistical results back to individual events.
+        * - Scope
+            - Results in aggregated output; drops original event data
+            - Retains original events and appends calculated fields to them
+        * - Use Case
+            - Use for standalone reports and dashboards.
+            - Use for enhancing event details without altering the dataset.
