@@ -168,18 +168,18 @@ Splunk uses metadata during indexing to enhance search speed and relevance.
 Both stats and eventstats are essential commands in Splunk used for performing statistical computations on event data. However, they serve distinct purposes in the data pipeline, especially in how they treat the original dataset. The key differences are outlined below:
 
 .. list-table:: Commands
-    :widths: 25, 25, 50
-    :header-rows: 1
+   :widths: 25 25 50
+   :header-rows: 1
 
-    * - Feature
-        - Stats
-        - Eventstats
-    * - Operation
-        - Generates statistical summaries based on grouped events.
-        - Adds computed statistical results back to individual events.
-    * - Scope
-        - Results in aggregated output; drops original event data
-        - Retains original events and appends calculated fields to them
-    * - Use Case
-        - Use for standalone reports and dashboards.
-        - Use for enhancing event details without altering the dataset.
+   * - Feature
+     - Stats
+     - Eventstats
+   * - Operation
+     - Generates statistical summaries based on grouped events.
+     - Adds computed statistical results back to individual events.
+   * - Scope
+     - Results in aggregated output; drops original event data.
+     - Retains original events and appends calculated fields to them.
+   * - Use Case
+     - Use for standalone reports and dashboards.
+     - Use for enhancing event details without altering the dataset.
