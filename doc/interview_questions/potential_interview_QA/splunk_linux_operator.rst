@@ -61,4 +61,39 @@ Each server different data collection needs, ensuring flexible and efficent data
 9. What is a Summary Index in Splunk, and How is it Used?
 #################################################################
 
+A Summary Index in Splunk stores precomputed results from searches, making repeated queries faster. It's userful for tren analysis and reporting where real-time data is not required. For Instance, summarizing daily log volumes help reduce search load
 
+10. What is splunk db connect, and how does it work?
+#########################################################
+
+Splunk DB Connect is a plugin that integrates relational databases with Splunk. It allows SQL-based data extraction and joins it with machine data. This unified view supports deeper analytics, like correlatin transactional data with server logs.
+
+11. What are Buckets in Splunk, and Can you Explain the Bucket Lifecycle?
+################################################################################
+
+Buckets in Splunk are storage directories that contain indexed data. They pass through distinct lifecycle stages:
+
+* **Hot**: Data is actively written.
+* **Warm**: Data is no longer actively written but frequently accessed.
+* **Cold**: Archived data, accessed occasionally.
+* **Frozen**: Data is either deleted or archived externally.
+
+This lifecycle ensures efficient storage management and quick data retrieval.
+
+12. What type of dashboards can be created in splunk?
+############################################################
+
+* **Real-Time Dashboards**: Display live-streaming data.
+* **Static Dashboards**: Present a fixed data snapshot for a given timeframe.
+* **Interactive Dashboards**: Offer user-driven filtering and drill-down capabilities.
+
+Dashboards enhance visibility and enable quick, actionable insights across datasets.
+
+13. What are the Different Search Modes Supported in Splunk?
+###################################################################
+
+* **Fast**: Prioritizes speed; omits some event details
+* **Smart**: Balances speed and depth by adapting to query complexity.
+* **Verbose**: Provides complete event information, including raw data.
+
+Search mode selection directly afects performance and data granularity.
