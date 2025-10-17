@@ -75,3 +75,35 @@ If you see `Backend is offline` when running `systemctl status sssd`, you should
 .. code-block:: console
 
     systemctl restart sssd
+
+Failed to initalize credentials using keytab [MEMORY:/etc/krb5.keytab]: Preautehtnication Failed
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+https://access.redhat.com/solutions/3380341
+
+Use realm list to grab the information to join. You'll want to know the **domain-name** and the **realm-name**
+
+.. code-block:: console
+
+    realm list
+    
+leave the realm
+
+.. code-block:: console
+
+    realm leave
+
+remove the files
+
+.. code-block:: console
+
+    rm -rf /etc/krb5.keytab
+    rm -rf /var/lib/sss/db/*
+    rm -rf /var/lib/sss/mc/*
+    rm -rf /etc/sssd/sssd.conf
+
+join back again
+
+.. code-block:: console
+
+    realm -v domain-name -U user.name@realm-name
