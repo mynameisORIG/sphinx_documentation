@@ -266,7 +266,7 @@ Located at `$SPLUNK_HOME/var/lib/splunk/fishbucket`, this directory contains spe
 40. How can you determine when splunk has finished indexing a log file?
 ###############################################################################
 
-o confirm that Splunk has fully indexed a log file, administrators typically monitor internal logs or review indexing throughput metrics. The internal index (`_internal``) provides near real-time visibility into the status of data ingestion.
+To confirm that Splunk has fully indexed a log file, administrators typically monitor internal logs or review indexing throughput metrics. The internal index (`_internal``) provides near real-time visibility into the status of data ingestion.
 
 Using this internal data, administrators can assess:
 
@@ -275,3 +275,87 @@ Using this internal data, administrators can assess:
 * Latency between data input and availability for search.
 
 Additionally, the fishbucket can confirm the last-read position of a monitored file, indicating whether indexing has concluded or is still ongoing.
+
+41. What is the Dispatch Directory, and What Role Does it Server?
+########################################################################
+
+The Dispatch directory in Splunk is a temporary storage location for search artifacts and results generated during query execution. Every time a user runs a search, Splunk creates a unique subdirectory under
+
+.. code-block:: console
+
+  $SPLUNK_HOME/var/run/splunk/dispatch
+
+to store the runtiem atqa associated with that search
+
+Contents of the Dispatch Directory
++++++++++++++++++++++++++++++++++++++++++
+
+
+* Search results (CSV, JSON, etc.) 
+* Metadata and search logs 
+* Temporary artifacts like job status and execution time
+
+This directory is essential for long-running searches, scheduled reports, and dashboard rendering. If a search is interrupted or scheduled for background execution, the dispatch folder retains the results for user retrieval or post-processing.
+
+45. How do splunk SDK and Splunk Framework Differ from Each other?
+########################################################################
+
+Splunk SDK and Splunk Framework serve different purposes in application development within the Splunk ecosystem.
+
+**Splunk SDK** is a set of programming tools available in languages such as Python, Java, and JavaScript. It is used to build external applications or integrations that interact with Splunk programmatically, such as querying data or automating tasks.
+
+**Splunk Framework** (e.g., Splunk Web Framework) is primarily used to create rich, interactive web applications and dashboards within the Splunk UI. It is more UI-centric and generally involves JavaScript and reusable components.
+
+48. Can you explain the various types of data inputs in splunk?
+####################################################################
+
+Splunk supports diverse data input mechanisms to ingest structured, semi-strutured, and unstructured data from multiple sources.
+
+Supported input types include file and directory monitoring, real-time streaming via TCP/UDP, scripted inputs, API-based inputs, and modular inputs for custom sources. This flexibility enables Splunk to integrate seamlessly with enterprise systems, IoT devices, and cloud platforms.
+
+50. What is Splunk's Field Extractor, and How Is It Used?
+##############################################################
+
+The field extractor is a UI-based tool in Splnk that helps users define and validate custom field extractions. It simplifies parsing complex log formats without needing deep knowlege of regular expressions.
+
+Users can select example events, highlight desired patterns, and test regex-based rules, which Splunk then applies during data indexing or search-time operations.
+
+**mine** What is index vs. source type
+################################################
+
+. list-table:: index v. source type
+   :widths: 25 25 50
+   :header-rows: 1
+
+   * - Title
+     - Definition
+     - Purpose
+     - think of it as
+     - Examples
+   * - Index
+     - An index in Splunk is a repository (a database on disk) where Splunk stores data that has been ingested.
+     - It’s how Splunk organizes and retrieves data efficiently.
+     - A filing cabinet — each index is a drawer that holds related data.
+     - `index=security ` for security logs ; `index=web` for web server logs ; `index=os` for system logs 
+   * - Sourcetype
+     - The sourcetype tells Splunk what kind of data it is — i.e., how to interpret and parse it.
+     - It determines field extractions, timestamp formats, event line breaks, and search-time knowledge.
+     - A label for the data format — it tells Splunk how to read and understand the raw data inside the index.
+     - `sourcetype=linux_secure` for linux auth logs; `sourcetype=access_combined` for apache web access logs; `sourcetype=syslog` for general syslog data
+
+index in a inputs.conf or props.conf
+
+.. code-block:: console
+
+  [monitor:///var/log/httpd/access.log]
+  index = web
+  sourcetype = access_combined
+
+multiple sources can share the same source type if they have the same format
+
+
+.. code-block:: console
+
+  /var/log/httpd/access.log
+  /var/log/nginx/access.log
+
