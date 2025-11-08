@@ -7,6 +7,7 @@ Splunk Page
 
    splunkCloud
    installUF
+   UFTroubleshooting
    changeMGMTport
    
 Indices and tables
