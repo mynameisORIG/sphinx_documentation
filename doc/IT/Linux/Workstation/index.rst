@@ -17,3 +17,4 @@ Linux Workstation Homepage
    Partitions
    systemdService
    sssd
+   timezone
