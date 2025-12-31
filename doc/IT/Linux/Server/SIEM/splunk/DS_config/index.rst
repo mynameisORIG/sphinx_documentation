@@ -5,12 +5,7 @@ Splunk Page
    :maxdepth: 1
    :caption: Contents:
 
-   splunkCloud
-   indexer_cmds
-   installUF
-   UFTroubleshooting
-   changeMGMTport
-   DS_config/index
+   lower_mem_usuage
    
 Indices and tables
 ==================
