@@ -7,3 +7,4 @@ nextcloud Homepage
 
    ldap
    talk
+   update
