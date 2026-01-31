@@ -1,0 +1,206 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Installing AWX &mdash; docs 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="../../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../../../../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="Files needed for AWX" href="files.html" />
+    <link rel="prev" title="Awx Page" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../index.html" class="icon icon-home">
+            docs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../coding/index.html">Coding Homepage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../hacking/index.html">Hacking Home Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../defense/index.html">Cyber Defense Home Page</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../index.html">IT Homepage</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../download.html">How to download files via CLI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../Windows/index.html">Windows IT Homepage</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../index.html">Linux IT Homepage</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../../Workstation/index.html">Linux Workstation Homepage</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html">Linux Server Homepage</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html">Configuration Management Page</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../squid/index.html">Squid Page</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../RHSatellite/index.html">Red Hat Satellite Page</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../nagios/index.html">Nagios Page</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../SIEM/index.html">SIEM Server Homepage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../codeREPO/index.html">Linux Code Server Homepage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../morpheus/index.html">Morpheus Homepage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../homepage/index.html">Browser homepage Homepage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../SQL/index.html">SQL Server Homepage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../nextcloud/index.html">nextcloud Homepage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../repos.html">Repo stuff</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../smb.html">How to see smb files Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../Hypervisors/index.html">Hypervisor home Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../containers/index.html">Containers Homepage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../interview_questions/index.html">interview questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../walkthroughs/index.html">Walkthroughs Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../photoshop/index.html">Photoshop home Page</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../index.html">IT Homepage</a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">Linux IT Homepage</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Linux Server Homepage</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Configuration Management Page</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Awx Page</a></li>
+      <li class="breadcrumb-item active">Installing AWX</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../_sources/IT/Linux/Server/ConfigurationMGMT/awx/install.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="installing-awx">
+<h1>Installing AWX<a class="headerlink" href="#installing-awx" title="Link to this heading"></a></h1>
+<section id="pre-req">
+<h2>Pre-Req<a class="headerlink" href="#pre-req" title="Link to this heading"></a></h2>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">curl -sfL https://get.k3s.io | sh</span>
+<span class="go">dnf -y install git make jq</span>
+<span class="go">cd /etc/yum.repo.d</span>
+<span class="go">wget https://download.docker.com/linux/centos/docker-ce.repo</span>
+<span class="go">vi docker.repo</span>
+<span class="go">    At the end of each section add the following:</span>
+<span class="go">    sslverify=0</span>
+</pre></div>
+</div>
+</section>
+<section id="starting-awx-operator">
+<h2>Starting AWX Operator<a class="headerlink" href="#starting-awx-operator" title="Link to this heading"></a></h2>
+<section id="getting-the-repo">
+<h3>getting the repo<a class="headerlink" href="#getting-the-repo" title="Link to this heading"></a></h3>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git clone https://github.com/ansible/awx-operator.git</span>
+<span class="go">cd awx-operator</span>
+</pre></div>
+</div>
+</section>
+<section id="setup-namespace">
+<h3>Setup namespace<a class="headerlink" href="#setup-namespace" title="Link to this heading"></a></h3>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">export NAMESPACE=awx</span>
+<span class="go">kubectl create ns ${NAMESPACE}</span>
+<span class="go">kubectl config set-context --current --namespace=awx</span>
+</pre></div>
+</div>
+</section>
+<section id="configuring-repo">
+<h3>configuring repo<a class="headerlink" href="#configuring-repo" title="Link to this heading"></a></h3>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">RELEASE_TAG=`curl –s https://api.github.com/repos/ansible/awx-operator/releases/latest | grep tag_name | cut –d ‘”’ -f 4`</span>
+<span class="go">git checkout $RELEASE_TAG</span>
+<span class="go">make deploy</span>
+<span class="go">kubectl get pods –n awx</span>
+</pre></div>
+</div>
+</section>
+<section id="edit-awx-files">
+<h3>Edit awx files<a class="headerlink" href="#edit-awx-files" title="Link to this heading"></a></h3>
+<p>You will need to create the following files:</p>
+<ul class="simple">
+<li><p>awx-demo.yml</p></li>
+<li><p>awx-ingress.yml</p></li>
+<li><p>awx.yml</p></li>
+</ul>
+<p>You should be able to find it via the files section of awx.</p>
+</section>
+<section id="start-kubernetes-cluster">
+<h3>Start Kubernetes Cluster<a class="headerlink" href="#start-kubernetes-cluster" title="Link to this heading"></a></h3>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">kubectl apply -f awx-demo.yml -n awx; kubectl apply -f awx-ingress.yml -n awx; kubectl apply -f awx.yml -n awx</span>
+</pre></div>
+</div>
+</section>
+<section id="get-admin-user-default-password">
+<h3>Get admin user default password<a class="headerlink" href="#get-admin-user-default-password" title="Link to this heading"></a></h3>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">kubectl get secret awx-demo-admin-password –o jsonpath=”{.data.password}” | base64 –decode</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Awx Page" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="files.html" class="btn btn-neutral float-right" title="Files needed for AWX" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, mynameisORIG.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

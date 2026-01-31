@@ -1,0 +1,210 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Switching from old Mariadb server to a new Mariadb server &mdash; docs 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="../../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../../../../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="commands" href="commands.html" />
+    <link rel="prev" title="Mariadb Homepage" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../index.html" class="icon icon-home">
+            docs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../coding/index.html">Coding Homepage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../hacking/index.html">Hacking Home Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../defense/index.html">Cyber Defense Home Page</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../index.html">IT Homepage</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../download.html">How to download files via CLI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../Windows/index.html">Windows IT Homepage</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../index.html">Linux IT Homepage</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../../Workstation/index.html">Linux Workstation Homepage</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html">Linux Server Homepage</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../ConfigurationMGMT/index.html">Configuration Management Page</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../squid/index.html">Squid Page</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../RHSatellite/index.html">Red Hat Satellite Page</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../nagios/index.html">Nagios Page</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../SIEM/index.html">SIEM Server Homepage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../codeREPO/index.html">Linux Code Server Homepage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../morpheus/index.html">Morpheus Homepage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../homepage/index.html">Browser homepage Homepage</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html">SQL Server Homepage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../nextcloud/index.html">nextcloud Homepage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../repos.html">Repo stuff</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../smb.html">How to see smb files Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../Hypervisors/index.html">Hypervisor home Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../containers/index.html">Containers Homepage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../interview_questions/index.html">interview questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../walkthroughs/index.html">Walkthroughs Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../photoshop/index.html">Photoshop home Page</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../index.html">IT Homepage</a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">Linux IT Homepage</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Linux Server Homepage</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">SQL Server Homepage</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Mariadb Homepage</a></li>
+      <li class="breadcrumb-item active">Switching from old Mariadb server to a new Mariadb server</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../_sources/IT/Linux/Server/SQL/Mariadb/switchDBServer.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="switching-from-old-mariadb-server-to-a-new-mariadb-server">
+<h1>Switching from old Mariadb server to a new Mariadb server<a class="headerlink" href="#switching-from-old-mariadb-server-to-a-new-mariadb-server" title="Link to this heading"></a></h1>
+<section id="prepare-old-server">
+<h2>Prepare Old Server<a class="headerlink" href="#prepare-old-server" title="Link to this heading"></a></h2>
+<section id="ensure-all-data-is-consistent">
+<h3>Ensure all data is consistent<a class="headerlink" href="#ensure-all-data-is-consistent" title="Link to this heading"></a></h3>
+<p>Stop any appilcations (e.g Wordpress) that write to the database to avoid data changes during migration.</p>
+<p>Or, lock the database in read-only mode (optional for replication use).</p>
+<p>To Lock the database in read-only mode, you can do this:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">FLUSH TABLES WITH READ LOCK;</span>
+</pre></div>
+</div>
+<p>Stop mariadb</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">systemctl stop mariadb</span>
+</pre></div>
+</div>
+</section>
+<section id="backup-all-databases">
+<h3>Backup all databases<a class="headerlink" href="#backup-all-databases" title="Link to this heading"></a></h3>
+<p>The code below creates a full mariadb backup dump of all databases</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mysqldump -u root -p --all-databases --routines --events --triggers --flush-privileges &gt; /tmp/full_mariadb_backup.sql</span>
+</pre></div>
+</div>
+<p>The code below creates a mariadb backup dump of databases you choose</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mysqldump -u root -p --databases app_db1 app_db2 wordpress_db --routines --events --triggers --flush-privileges &gt; /tmp/filtered_mariadb_backup.sql</span>
+</pre></div>
+</div>
+<p>You would them dump the file to the new server</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">scp /tmp/full_mariadb_backup.sql user@newserver:/tmp/</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="setup-new-server">
+<h2>Setup New Server<a class="headerlink" href="#setup-new-server" title="Link to this heading"></a></h2>
+<section id="install-packages">
+<h3>Install Packages<a class="headerlink" href="#install-packages" title="Link to this heading"></a></h3>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo dnf install mariadb-server mariadb mariadb-libs mariadb-connector-c mariadb-connector-c-config</span>
+</pre></div>
+</div>
+</section>
+<section id="systemd-service">
+<h3>systemd service<a class="headerlink" href="#systemd-service" title="Link to this heading"></a></h3>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">systemctl enable mariadb --now</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="import-the-data">
+<h2>Import the Data<a class="headerlink" href="#import-the-data" title="Link to this heading"></a></h2>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mysql -u root -p &lt; /tmp/full_mariadb_backup.sql</span>
+</pre></div>
+</div>
+</section>
+<section id="test-the-new-server">
+<h2>Test the New Server<a class="headerlink" href="#test-the-new-server" title="Link to this heading"></a></h2>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mysql -u root -p -e &quot;SHOW DATABASES;&quot;</span>
+<span class="go">mysql -u root -p -e &quot;SELECT User, Host FROM mysql.user;&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="unlock-databases-if-need-be">
+<h2>Unlock databases if need be<a class="headerlink" href="#unlock-databases-if-need-be" title="Link to this heading"></a></h2>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">UNLOCK TABLES;</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Mariadb Homepage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="commands.html" class="btn btn-neutral float-right" title="commands" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, mynameisORIG.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

