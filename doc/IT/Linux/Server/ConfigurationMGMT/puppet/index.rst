@@ -8,6 +8,7 @@ Puppet Page
    puppet_troubleshooting
    install
    transfer_to_new_puppetserver
+   setup
    
 Indices and tables
 ==================
