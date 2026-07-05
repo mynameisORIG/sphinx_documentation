@@ -10,6 +10,7 @@ Wazuh Page
    scripts
    rulesAlerts
    tranferWazuhServer
+   troubleshooting
    
 Indices and tables
 ==================
