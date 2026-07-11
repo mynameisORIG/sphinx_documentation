@@ -1,0 +1,1 @@
+This type of authentication server is not supported anymore since RHEL8. Use this at your own risk
