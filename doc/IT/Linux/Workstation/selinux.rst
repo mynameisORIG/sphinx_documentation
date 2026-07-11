@@ -1,6 +1,15 @@
 Selinux stuff
 ******************
 
+
+check for selinux denial messages
+#############################################
+
+.. code-block:: console
+
+    sudo ausearch -m avc -ts recent
+
+
 setroubleshootd service goes into failed state if SELinux is disabled
 #############################################################################
 
