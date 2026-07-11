@@ -1,0 +1,137 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Setting up FreeIPA client &mdash; docs 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../../../_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="../../../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../../../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../../../../../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../../../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../../index.html" class="icon icon-home">
+            docs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../coding/index.html">Coding Homepage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../hacking/index.html">Hacking Home Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../defense/index.html">Cyber Defense Home Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../index.html">IT Homepage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../interview_questions/index.html">interview questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../walkthroughs/index.html">Walkthroughs Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../photoshop/index.html">Photoshop home Page</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Setting up FreeIPA client</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../../_sources/IT/Linux/Server/Authentication/FreeIPA/client/setup.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="setting-up-freeipa-client">
+<h1>Setting up FreeIPA client<a class="headerlink" href="#setting-up-freeipa-client" title="Link to this heading"></a></h1>
+<section id="uninstall-freeipa">
+<h2>Uninstall freeipa<a class="headerlink" href="#uninstall-freeipa" title="Link to this heading"></a></h2>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ipa-client-install --uninstall</span>
+</pre></div>
+</div>
+</section>
+<section id="installing-freeipa-client">
+<h2>Installing freeipa client<a class="headerlink" href="#installing-freeipa-client" title="Link to this heading"></a></h2>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">dnf install freeipa-client sssd -y</span>
+<span class="go">authselect enable-feature with-mkhomedir</span>
+<span class="go">systemctl enable --now oddjobd</span>
+<span class="go">sudo ipa-client-install --hostname=host.deathstar.com --mkhomedir --server=ipa.deathstar.com --domain=deathstar.com --realm=DEATHSTAR.COM --no-ntp --force-join</span>
+<span class="go">    Proceed with fixed values and no DNS discovery? [no]: yes</span>
+<span class="go">    Continue to configure the system with these values? [no]: yes</span>
+<span class="go">    User authorized to enroll computers: admin</span>
+<span class="go">    Password for admin@DEATHSTAR.COM:</span>
+</pre></div>
+</div>
+<section id="lxc-container">
+<h3>lxc container<a class="headerlink" href="#lxc-container" title="Link to this heading"></a></h3>
+<p>If you have an lxc container you are running this on, you need to add an extra step.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo sed -i &#39;/\[domain\/deathstar.com\]/a krb5_ccache_type = FILE&#39; /etc/sssd/sssd.conf</span>
+</pre></div>
+</div>
+<p>If you don’t you get this error <strong>krb5_cc_cache_match failed: [-1750600185][Invalid UID in persistent keyring name]</strong></p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, mynameisORIG.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

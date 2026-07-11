@@ -1,0 +1,19 @@
+Splunk Page
+*******************
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Contents:
+
+   splunkCloud
+   indexer_cmds
+   installUF
+   UFTroubleshooting
+   changeMGMTport
+   DS_config/index
+   
+Indices and tables
+==================
+
+* :ref:`search`
+

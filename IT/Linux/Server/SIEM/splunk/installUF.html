@@ -1,0 +1,222 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Installing a Universial Forwarder &mdash; docs 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="../../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../../../../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="Universal Forwarder troubleshooting" href="UFTroubleshooting.html" />
+    <link rel="prev" title="Commands you can run on the indexer" href="indexer_cmds.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../index.html" class="icon icon-home">
+            docs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../coding/index.html">Coding Homepage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../hacking/index.html">Hacking Home Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../defense/index.html">Cyber Defense Home Page</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../index.html">IT Homepage</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../download.html">How to download files via CLI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../Windows/index.html">Windows IT Homepage</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../index.html">Linux IT Homepage</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../../Workstation/index.html">Linux Workstation Homepage</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html">Linux Server Homepage</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../ConfigurationMGMT/index.html">Configuration Management Page</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../squid/index.html">Squid Page</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../RHSatellite/index.html">Red Hat Satellite Page</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../nagios/index.html">Nagios Page</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html">SIEM Server Homepage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../codeREPO/index.html">Linux Code Server Homepage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../morpheus/index.html">Morpheus Homepage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../homepage/index.html">Browser homepage Homepage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../SQL/index.html">SQL Server Homepage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../nextcloud/index.html">nextcloud Homepage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../repos.html">Repo stuff</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../smb.html">How to see smb files Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../Hypervisors/index.html">Hypervisor home Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../containers/index.html">Containers Homepage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../interview_questions/index.html">interview questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../walkthroughs/index.html">Walkthroughs Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../photoshop/index.html">Photoshop home Page</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../index.html">IT Homepage</a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">Linux IT Homepage</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Linux Server Homepage</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">SIEM Server Homepage</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Splunk Page</a></li>
+      <li class="breadcrumb-item active">Installing a Universial Forwarder</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../_sources/IT/Linux/Server/SIEM/splunk/installUF.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="installing-a-universial-forwarder">
+<h1>Installing a Universial Forwarder<a class="headerlink" href="#installing-a-universial-forwarder" title="Link to this heading"></a></h1>
+<section id="backup-for-deployment-linux">
+<h2>Backup for Deployment Linux<a class="headerlink" href="#backup-for-deployment-linux" title="Link to this heading"></a></h2>
+<p>/opt/splunk/etc</p>
+</section>
+<section id="main-folders">
+<h2>Main Folders<a class="headerlink" href="#main-folders" title="Link to this heading"></a></h2>
+<section id="windows">
+<h3>Windows<a class="headerlink" href="#windows" title="Link to this heading"></a></h3>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">C:\Program Files\SplunkUniversalForwarder\etc\apps</span>
+</pre></div>
+</div>
+</section>
+<section id="linux">
+<h3>Linux<a class="headerlink" href="#linux" title="Link to this heading"></a></h3>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">/opt/splunkforwarder/etc/apps</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="install">
+<h2>Install<a class="headerlink" href="#install" title="Link to this heading"></a></h2>
+<section id="windows-install">
+<h3>Windows Install<a class="headerlink" href="#windows-install" title="Link to this heading"></a></h3>
+<p>splunk.msi
+Accept License
+On-Prem
+Leave Deployment Server blank
+Leave receiver blank
+okay
+install</p>
+</section>
+<section id="linux-install">
+<h3>Linux Install<a class="headerlink" href="#linux-install" title="Link to this heading"></a></h3>
+<section id="root-user">
+<h4>Root user<a class="headerlink" href="#root-user" title="Link to this heading"></a></h4>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">wget -O splunkforwarder-version.x86_64.rpm &quot;https://download.splunk.com/products/universalforwarder/releases/...&quot;</span>
+<span class="go">rpm -ivh splunkforwarder-version.x86_64.rpm</span>
+</pre></div>
+</div>
+</section>
+<section id="splunkfwd-user">
+<h4>Splunkfwd user<a class="headerlink" href="#splunkfwd-user" title="Link to this heading"></a></h4>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">su splunkfwd</span>
+<span class="go">/opt/splunkforwarder/bin/splunk start --accept-license</span>
+<span class="go">     admin</span>
+<span class="go">     admin password</span>
+</pre></div>
+</div>
+<p>The bottom is only for IF</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">/opt/splunkforwader/bin/splunk install app /path/to/splunkclouduf.spl</span>
+<span class="go">mv X_if_forwarders_inputs /opt/splunkforwarder/etc/apps/</span>
+<span class="go">mv X_all_deploymentclient_folder /opt/splunkforwarder/etc/apps/</span>
+<span class="go">mv X_all_uf_mgmtport_folder /opt/splunkforwarder/etc/apps/</span>
+</pre></div>
+</div>
+<p>The bootom is for UF</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mv X_if_forwarders_inputs /opt/splunkforwarder/etc/apps/</span>
+</pre></div>
+</div>
+</section>
+<section id="as-root-user">
+<h4>As root user<a class="headerlink" href="#as-root-user" title="Link to this heading"></a></h4>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mv X_all_deploymentclient_folder /opt/splunkforwarder/etc/apps/</span>
+<span class="go">/opt/splunkforwarder/bin/splunk enable boot-start -user splunkfwd -systemd-managed 1</span>
+<span class="go">systemctl start SplunkForwarder</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="changing-uf-port">
+<h2>Changing UF port<a class="headerlink" href="#changing-uf-port" title="Link to this heading"></a></h2>
+<section id="splunk-users">
+<h3>Splunk Users<a class="headerlink" href="#splunk-users" title="Link to this heading"></a></h3>
+<p>If you want to change the management port on the Splunk UF</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="indexer_cmds.html" class="btn btn-neutral float-left" title="Commands you can run on the indexer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="UFTroubleshooting.html" class="btn btn-neutral float-right" title="Universal Forwarder troubleshooting" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, mynameisORIG.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
